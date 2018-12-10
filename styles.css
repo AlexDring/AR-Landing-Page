@@ -66,7 +66,7 @@ a {
 }
 
 .body-text__large {
-    font-size: 30px;
+    font-size: 28px;
     margin-bottom: 2rem;
 }
 
@@ -423,7 +423,7 @@ nav .wrapper {
 }
 
 .app-section__image-container img {
-    width: 100%;
+    width: 90%;
 }
 
 .app-section__bullet-points {
@@ -434,10 +434,10 @@ nav .wrapper {
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 63.4%;
+    max-width: 57%;
     position: absolute;
-    top: 36px;
-    right: 93px;
+    top: 32px;
+    right: 145px;
   }
   
   /* Hide the images by default */
