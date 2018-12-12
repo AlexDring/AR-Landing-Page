@@ -28,27 +28,43 @@ var animateHTML = function() {
   };
   animateHTML().init();
 
-
 // Accordian
 
-var acc = document.getElementsByClassName("accordion");
-var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle("active");
+function initAccordion(accordionElem){
+  
+  //when panel is clicked, handlePanelClick is called.          
+  function handlePanelClick(event){
+      showPanel(event.currentTarget);
+  }
+//Hide currentPanel and show new panel.  
+  
+  function showPanel(panel){
+    //Hide current one. First time it will be null. 
+     var expandedPanel = accordionElem.querySelector(".active");
+     if (expandedPanel){
+         expandedPanel.classList.remove("active");
+     }
+     //Show new one
+     panel.classList.add("active");
+  }
+  var allPanelElems = accordionElem.querySelectorAll(".panel");
+  for (var i = 0, len = allPanelElems.length; i < len; i++){
+       allPanelElems[i].addEventListener("click", handlePanelClick);
+  }
+  //By Default Show first panel
+  showPanel(allPanelElems[0])
+}
+initAccordion(document.getElementById("accordion"));
 
-    /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-};
+function noClass() {
+  document.getElementById("action-image").className = ''.className = ".action-section__image-container ";
+}
+
+function emailAction() {
+  document.getElementById("action-image").className = ''.className = ".action-section__image-container action-email";
+}
+
 
 // Slideshow
 

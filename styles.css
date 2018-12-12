@@ -75,7 +75,7 @@ li {
 }
 
 h1 {
-    font-size: 58px;
+    font-size: 52px;
     color: white;
     margin-bottom: 0.6em;
 }
@@ -174,6 +174,9 @@ ul {
     width: 100%;
 }
 
+.fa-check-circle {
+    padding-right: 15px
+}
 
 /* HEADER *****************************************
 ***************************************************/
@@ -419,7 +422,6 @@ nav .wrapper {
     }
     .overview__image-container img {
         max-width: 130%;
-        margin: -55px;
     }
 }
 
@@ -596,7 +598,7 @@ background: linear-gradient(to right, #1c0d3b 50%, white 50%);
 
 
 /* Style the buttons that are used to open and close the accordion panel */
-.accordion {
+.panel {
     cursor: pointer;
     padding: 10px 0;
     width: 100%;
@@ -605,26 +607,19 @@ background: linear-gradient(to right, #1c0d3b 50%, white 50%);
     outline: none;
     transition: 0.4s;
     border-bottom:1px solid #4c565b;
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+  .acc-body {
+      padding: 1rem;
+      font-size: 16px;
   }
 
   .accordion__icon {
       width: 15px;
       color: #4c565b;
   }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
-    background-color: #ccc;
-  }
-  
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-  }
+
 
   .action-server {
     background-image: url(assets/images/Action-server.gif);
@@ -640,6 +635,15 @@ background: linear-gradient(to right, #1c0d3b 50%, white 50%);
     width: 50%;
   }
 
+  /** This class will hide all the body by default **/
+#accordion .acc-body{
+    display : none;
+ }
+ /** This class will show the body if it has "active" parent class. "active" class will be added to panel div **/
+ #accordion .active .acc-body {
+    display : block;
+ }
+
   
 @media all and (max-width: 768px) {
 
@@ -651,6 +655,11 @@ background: linear-gradient(to right, #1c0d3b 50%, white 50%);
             flex-basis: 100%;
             background-color: white;
         }
+
+        .action-email,
+        .action-server {
+            width: 100%;
+          }
 }
 
 /* BENEFITS *****************************************
@@ -692,7 +701,7 @@ background: linear-gradient(to right, #1c0d3b 50%, white 50%);
 }
 
 .benefits-section__bullets {
-    line-height: 200%;
+    line-height: 240%;
 }
 
 .benefits-section__sub-heading {

@@ -10,6 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
         <meta name="description" content="Get IT Insight with the KTSL AR app | See how you can dramatically improve user experiences and ITSM efficiency with KTSL augmented reality."/>
     </head>
     <body>
@@ -74,11 +75,11 @@
                     <div class="line line__long"></div>
                     <p class="body-text__opacity">With the KTSL AR app, you can:</p>
                     <ul class="app-section__bullet-points body-text__opacity">
-                        <li>Improve efficiency</li>
-                        <li>Strengthen satisfaction</li>
-                        <li>Increase productivity</li>
-                        <li>Cut costs</li>
-                        <li>Add value</li>
+                        <li><i class="far fa-check-circle"></i> Improve efficiency</li>
+                        <li><i class="far fa-check-circle"></i> Strengthen satisfaction</li>
+                        <li><i class="far fa-check-circle"></i> Increase productivity</li>
+                        <li><i class="far fa-check-circle"></i> Cut costs</li>
+                        <li><i class="far fa-check-circle"></i> Add value</li>
                     </ul>
                     <a href="#" class="button button--white">Arrange a consultation</a>
                 </div>
@@ -113,31 +114,27 @@
             <div class="container">
                 <div id="action-image" class="action-section__image-container action-email"><img src="" alt=""></div>
                 <div class="action-section__text-container">
-                    <h2 id="action-server">KTSL in action</h2>
+                    <h2 id="action" >KTSL in action</h2>
                     <p>Click a use case to see more</p>
 
-                    <a class="accordion">User laptop issues <img src="assets/cheveron-down.svg" alt="" class="accordion__icon"></a>
-                    <div style="display:block" class="panel">
-                    <p>Outlook is not working on a frustrated user’s laptop. He just waves his phone over the KTSL mark on his laptop to reveal all the information needed to fix the problem or log an information-rich ticket with ITSM.</p>
-                    </div>
-
-                    <a id="action-server" class="accordion">Identifying a problematic server <img src="assets/cheveron-down.svg" alt="" class="accordion__icon"></a>
-                    <div class="panel">
-                    <p>A server in a rack needs maintenance. Turning off the wrong one could critically impact the business. The engineer simply waves his phone over the KTSL mark on each server to instantly see what it is and its system status.</p>
-                    </div>
-
-                    <a class="accordion">Patching a server to a network point <img src="assets/cheveron-down.svg" alt="" class="accordion__icon"></a>
-                    <div class="panel">
-                    <p>An engineer is faced with a confusion of cables. He simply waves his phone over the switch, providing shared access to a live picture, which the network manager draws over to show which cable goes into which network point.</p>
-                    </div>
-
-                    <a class="accordion">Email system failure <img src="assets/cheveron-down.svg" alt="" class="accordion__icon"></a>
-                    <div class="panel">
-                    <p>The email system in a busy office goes down with no obvious reason why. A simple swipe of a phone instantly reveals what the problem is and that it will be resolved after lunch. To minimise downtime, the office takes lunch early.</p>
-                    </div>
-
-
-
+                    <div id="accordion">
+                            <div class="panel active"> <!-- first panel -->
+                                 <div class="acc-header" onclick="emailAction()">User laptop issues <img src="assets/cheveron-down.svg" alt="" class="accordion__icon"></div>
+                                 <div class="acc-body">Outlook is not working on a frustrated user’s laptop. He just waves his phone over the KTSL mark on his laptop to reveal all the information needed to fix the problem or log an information-rich ticket with ITSM.</div>
+                            </div>
+                            <div class="panel"> <!-- second panel -->
+                                 <div class="acc-header"  onclick="noClass()">Identifying a problematic server <img src="assets/cheveron-down.svg" alt="" class="accordion__icon"></div>
+                                 <div class="acc-body">A server in a rack needs maintenance. Turning off the wrong one could critically impact the business. The engineer simply waves his phone over the KTSL mark on each server to instantly see what it is and its system status.</div>
+                            </div>
+                            <div class="panel"> <!-- third panel -->
+                                 <div class="acc-header">Patching a server to a network point <img src="assets/cheveron-down.svg" alt="" class="accordion__icon"></div>
+                                 <div class="acc-body">An engineer is faced with a confusion of cables. He simply waves his phone over the switch, providing shared access to a live picture, which the network manager draws over to show which cable goes into which network point.</div>
+                            </div>
+                            <div class="panel"> <!-- third panel -->
+                                <div class="acc-header">Email system failure <img src="assets/cheveron-down.svg" alt="" class="accordion__icon"></div>
+                                <div class="acc-body">The email system in a busy office goes down with no obvious reason why. A simple swipe of a phone instantly reveals what the problem is and that it will be resolved after lunch. To minimise downtime, the office takes lunch early.</div>
+                           </div>
+                       </div>
 
                     <a href="" class="button button--black">Find out more</a>
                 </div>
@@ -155,10 +152,10 @@
                             <h4 class="benefits-section__sub-heading">Better for your users</h4>
                             <div class="line"></div>
                             <ul class="benefits-section__bullets">
-                                <li>Faster resolution times</li>
-                                <li>Higher first-time fix rates</li>
-                                <li>Less downtime</li>
-                                <li>More productivity</li>
+                                <li><i class="far fa-check-circle"></i> Faster resolution times</li>
+                                <li><i class="far fa-check-circle"></i> Higher first-time fix rates</li>
+                                <li><i class="far fa-check-circle"></i> Less downtime</li>
+                                <li><i class="far fa-check-circle"></i> More productivity</li>
                             </ul>
                             <div class="line"></div>
                             <p><strong>Increased user satisfaction</strong></p>
@@ -168,10 +165,10 @@
                             <h4 class="benefits-section__sub-heading">Better for your ITSM team</h4>
                             <div class="line"></div>
                             <ul class="benefits-section__bullets">
-                                <li>Get it right first time, right away</li>
-                                <li>Scale up your expertise and resource availability</li>
-                                <li>Minimise support costs</li>
-                                <li>Reduce training required</li>
+                                <li><i class="far fa-check-circle"></i> Get it right first time, right away</li>
+                                <li><i class="far fa-check-circle"></i> Scale up your expertise and resource availability</li>
+                                <li><i class="far fa-check-circle"></i> Minimise support costs</li>
+                                <li><i class="far fa-check-circle"></i> Reduce training required</li>
                             </ul>
                             <div class="line"></div>
                             <p><strong>ITSM efficiency</strong></p>
