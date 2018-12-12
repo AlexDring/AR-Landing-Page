@@ -48,7 +48,7 @@ for (i = 0; i < acc.length; i++) {
       panel.style.display = "block";
     }
   });
-}
+};
 
 // Slideshow
 
@@ -69,5 +69,12 @@ function showSlides(n) {
       slides[i].style.display = "none"; 
   }
   slides[slideIndex-1].style.display = "block"; 
+};
+
+function noClass() {
+  document.getElementById("action-image").className = ''.className = ".action-section__image-container action-server";
 }
 
+function emailAction() {
+  document.getElementById("action-image").className = ''.className = ".action-section__image-container action-email";
+}

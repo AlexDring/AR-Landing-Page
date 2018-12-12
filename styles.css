@@ -208,6 +208,7 @@ nav ul {
 nav ul a {
   display: block;
   text-decoration: none;
+  color: #161619;
 }
 
 nav ul a:hover {
@@ -350,7 +351,7 @@ nav .wrapper {
         padding-left: 0;
     }
     .hero-section {
-        background-position: -228px -258px;
+        background-position: -69px -68px;
         background-size: 100%; 
     }
     .hero__image-containter img {
@@ -401,7 +402,8 @@ nav .wrapper {
 }
 
 .overview__image-container img {
-    max-width: 100%;
+    max-width: 130%;
+    margin: -35px;
 }
 
 @media all and (max-width: 768px) {
@@ -414,6 +416,10 @@ nav .wrapper {
     }
     .overview__image-container {
         flex-basis: 100%;
+    }
+    .overview__image-container img {
+        max-width: 130%;
+        margin: -55px;
     }
 }
 
@@ -588,6 +594,7 @@ background: linear-gradient(to right, #1c0d3b 50%, white 50%);
 }
 
 
+
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
     cursor: pointer;
@@ -617,6 +624,20 @@ background: linear-gradient(to right, #1c0d3b 50%, white 50%);
     background-color: white;
     display: none;
     overflow: hidden;
+  }
+
+  .action-server {
+    background-image: url(assets/images/Action-server.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 50%;
+  }
+
+  .action-email {
+    background-image: url(assets/images/Action-Email.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 50%;
   }
 
   
