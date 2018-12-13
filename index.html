@@ -2,16 +2,19 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Augmented Reality | KTSL</title>
-        <meta name="description" content="">
+        <meta name="description" content="Get IT Insight with the KTSL AR app | See how you can dramatically improve user experiences and ITSM efficiency with KTSL augmented reality."/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
-        <meta name="description" content="Get IT Insight with the KTSL AR app | See how you can dramatically improve user experiences and ITSM efficiency with KTSL augmented reality."/>
+        <!--[if IE]>
+        <script src="flexibility.js"></script>
+    <![endif]-->
+    
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -118,19 +121,19 @@
                     <p>Click a use case to see more</p>
 
                     <div id="accordion">
-                            <div class="panel active"> <!-- first panel -->
-                                 <div class="acc-header" onclick="emailAction()">User laptop issues <img src="assets/cheveron-down.svg" alt="" class="accordion__icon"></div>
+                            <div class="panel active" onclick="emailAction()"> <!-- first panel -->
+                                 <div class="acc-header">User laptop issues <img src="assets/cheveron-down.svg" alt="" class="accordion__icon"></div>
                                  <div class="acc-body">Outlook is not working on a frustrated user’s laptop. He just waves his phone over the KTSL mark on his laptop to reveal all the information needed to fix the problem or log an information-rich ticket with ITSM.</div>
                             </div>
-                            <div class="panel"> <!-- second panel -->
-                                 <div class="acc-header"  onclick="noClass()">Identifying a problematic server <img src="assets/cheveron-down.svg" alt="" class="accordion__icon"></div>
+                            <div class="panel" onclick="noClass()"> <!-- second panel -->
+                                 <div class="acc-header">Identifying a problematic server <img src="assets/cheveron-down.svg" alt="" class="accordion__icon"></div>
                                  <div class="acc-body">A server in a rack needs maintenance. Turning off the wrong one could critically impact the business. The engineer simply waves his phone over the KTSL mark on each server to instantly see what it is and its system status.</div>
                             </div>
-                            <div class="panel"> <!-- third panel -->
+                            <div class="panel" onclick="laptopAction()"> <!-- third panel -->
                                  <div class="acc-header">Patching a server to a network point <img src="assets/cheveron-down.svg" alt="" class="accordion__icon"></div>
                                  <div class="acc-body">An engineer is faced with a confusion of cables. He simply waves his phone over the switch, providing shared access to a live picture, which the network manager draws over to show which cable goes into which network point.</div>
                             </div>
-                            <div class="panel"> <!-- third panel -->
+                            <div class="panel" onclick="patchingAction()"> <!-- third panel -->
                                 <div class="acc-header">Email system failure <img src="assets/cheveron-down.svg" alt="" class="accordion__icon"></div>
                                 <div class="acc-body">The email system in a busy office goes down with no obvious reason why. A simple swipe of a phone instantly reveals what the problem is and that it will be resolved after lunch. To minimise downtime, the office takes lunch early.</div>
                            </div>
@@ -190,7 +193,7 @@
                         Leafield Industrial Estate<br>
                         Wiltshire<br>
                         SN13 9RS<br>
-                        t: 0845 034 8000
+                        <a href="tel:0845 034 8000">t: 0845 034 8000</a>
                         </address>
                     </div>
                     <div class="footer__nav">

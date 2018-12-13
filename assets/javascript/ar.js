@@ -65,6 +65,13 @@ function emailAction() {
   document.getElementById("action-image").className = ''.className = ".action-section__image-container action-email";
 }
 
+function laptopAction() {
+  document.getElementById("action-image").className = ''.className = ".action-section__image-container action-laptop";
+}
+
+function patchingAction() {
+  document.getElementById("action-image").className = ''.className = ".action-section__image-container action-patching";
+}
 
 // Slideshow
 
@@ -94,3 +101,5 @@ function noClass() {
 function emailAction() {
   document.getElementById("action-image").className = ''.className = ".action-section__image-container action-email";
 }
+
+
