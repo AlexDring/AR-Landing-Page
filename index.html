@@ -122,7 +122,7 @@
           <!-- Slideshow container -->
           <div class="slideshow-container">
             <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
+            <div class="mySlides1 fade">
               <img
                 src="assets/images/Augmented-Reality-Laptop-Demo.png"
                 alt="Augmented reality laptop demo"
@@ -130,7 +130,7 @@
               />
             </div>
 
-            <div class="mySlides fade">
+            <div class="mySlides1 fade">
               <img
                 src="assets/images/Aumented-Reality-Server-Demo.png"
                 alt="Augmented reality server demo"
@@ -138,7 +138,7 @@
               />
             </div>
 
-            <div class="mySlides fade">
+            <div class="mySlides1 fade">
               <img
                 src="assets/images/Augmented-Reality-Card-Demo.png"
                 alt="Augmented reality card demo"
@@ -147,9 +147,10 @@
             </div>
 
             <!-- Next and previous buttons -->
-            <a class="prev animated pusle" onclick="plusSlides(-1)">&#8592;</a>
-            <a style="display: inline-blocknpm install aos --save
-" class="next animated pulse" onclick="plusSlides(1)">&#8594;</a>
+            <a class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0)">&#8592;</a>
+            <a class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 0)">&#8594;</a>
+            <a class="prev animated pusle"  onclick="plusDivs(-1)">&#8592;</a>
+            <a class="next animated pulse" onclick="plusDivs(+1)">&#8594;</a>
           </div>
           <img src="assets/images/Laptop-Demo.png" alt="" />
         </div>
@@ -157,18 +158,25 @@
     </section>
     <section class="section action-section">
       <div class="container">
-        <div
-          id="action-image"
-          class="action-section__image-container action-email"
-        >
-          <img src="#" alt="" />
+        <div id="action-laptop" class="action-section__image-container">
+            <img style="height:400px" class="mySlides2" src="assets/images/KTSL-in-Action.png">
+            <img style="height:400px" class="mySlides2" src="assets/images/scenario 1_scenario 1 - pos.png">
+            <a class="w3-button w3-display-left" onclick="plusDivs(-1, 1)">&#8592;</a>
+            <a class="w3-button w3-display-right" onclick="plusDivs(1, 1)">&#8594;</a>
+        </div>
+          <div id="action-email" class="action-section__image-container hide-slideshow">          
+              <img style="height:400px" class="mySlides3" src="assets/images/scenario 2_scenario 1 - AR.png">
+              <img style="height:400px" class="mySlides3" src="assets/images/scenario 2_scenario 1 - neg.png">
+              <img style="height:400px" class="mySlides3" src="assets/images/scenario 2_scenario 1 - pos.png">
+          <a class="w3-button w3-display-left" onclick="plusDivs(-1, 2)">&#8592;</a>
+          <a class="w3-button w3-display-right" onclick="plusDivs(1, 2)">&#8594;</a>
         </div>
         <div class="action-section__text-container">
           <h2 id="action">KTSL in action</h2>
           <p>Click a use case to see more</p>
 
           <div id="accordion">
-            <div class="panel active" onclick="emailAction()">
+            <div class="panel active" onclick="laptopAction()">
               <!-- first panel -->
               <div class="acc-header">
                 User laptop issues
@@ -185,7 +193,7 @@
                 information-rich ticket with ITSM.
               </div>
             </div>
-            <div class="panel" onclick="noClass()">
+            <div class="panel" onclick="emailAction()">
               <!-- second panel -->
               <div class="acc-header">
                 Identifying a problematic server
@@ -219,7 +227,7 @@
                 cable goes into which network point.
               </div>
             </div>
-            <div class="panel" onclick="patchingAction()">
+            <div class="panel" onclick="emailAction()">
               <!-- third panel -->
               <div class="acc-header">
                 Email system failure

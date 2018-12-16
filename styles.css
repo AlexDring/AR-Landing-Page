@@ -627,26 +627,16 @@ nav .wrapper {
   width: 15px;
   color: #4c565b;
 }
-.action-patching,
-.action-laptop,
-.action-email,
-.action-server {
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 50%;
+
+
+.hide-slideshow {
+  display: none;
 }
-.action-server {
-  background-image: url(assets/images/Server-in-Action.gif);
+
+.show-slideshow {
+  display: block;
 }
-.action-email {
-  background-image: url(assets/images/Email-in-Action.gif);
-}
-.action-laptop {
-  background-image: url(assets/images/Email-in-Action2.gif);
-}
-.action-patching {
-  background-image: url(assets/images/Patching-in-Action.gif);
-}
+
 /* * This class will hide all the body by default * */
 #accordion .acc-body {
   display: none;
@@ -744,69 +734,6 @@ nav .wrapper {
 }
 .hidden {
   opacity: 0;
-}
-
-
-@keyframes slideInLeft {
-  from {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.slideInLeft {
-  -webkit-animation-name: slideInLeft;
-  animation-name: slideInLeft;
-}
-
-@-webkit-keyframes slideInRight {
-  from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.slideInRight {
-  -webkit-animation-name: slideInRight;
-  animation-name: slideInRight;
-}
-
-@-webkit-keyframes slideInUp {
-  from {
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-    visibility: visible;
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
 }
 
 @media all and (max-width: 768px) {
