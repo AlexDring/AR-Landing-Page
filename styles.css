@@ -302,7 +302,6 @@ nav .wrapper {
   background-size: 600px;
   position: relative;
 }
-
 .hero {
   color: white;
   font-size: 24px;
@@ -328,7 +327,6 @@ nav .wrapper {
   margin: -4px 0;
   object-fit: cover;
 }
-
 .arrow-down {
   width: 0;
   height: 0;
@@ -439,14 +437,12 @@ nav .wrapper {
   margin-top: 70px;
   padding-left: 5%;
   flex-basis: 57.5%;
-
   position: relative;
 }
 .slideshow-container,
 .app-section__image-container img {
   max-width: 100%;
 }
-
 .app-section__bullet-points {
   margin-bottom: 2rem;
   padding: 0px;
@@ -469,7 +465,6 @@ nav .wrapper {
   padding: 0 35%;
   color: white;
   font-weight: bold;
-
   font-size: 38px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
@@ -569,7 +564,6 @@ nav .wrapper {
   flex-basis: 50%;
   padding: 2% 6%;
 }
-
 .action-section__text-container h2 {
   color: #00ded9;
 }
@@ -610,11 +604,9 @@ nav .wrapper {
 .action-laptop {
   background-image: url(assets/images/Email-in-Action2.gif);
 }
-
 .action-patching {
   background-image: url(assets/images/Patching-in-Action.gif);
 }
-
 /* * This class will hide all the body by default * */
 #accordion .acc-body {
   display: none;
@@ -672,14 +664,12 @@ nav .wrapper {
   flex-basis: 100%;
   text-align: center;
 }
-
 .benefits-section__benefits-container {
   flex-basis: 50%;
   text-align: center;
   list-style-type: none;
   margin-bottom: 3rem;
 }
-
 .benefits-section__benefits-container img {
   width: 70px;
 }
@@ -689,14 +679,11 @@ nav .wrapper {
 .benefits-section__bullets {
   line-height: 240%;
 }
-
 .benefits-section__sub-heading {
   margin: 1rem 0;
 }
-
 .benefits-section__title h3 {
   font-size: 34px;
-
   font-weight: 600;
   font-style: italic;
   width: 50%;
@@ -775,7 +762,6 @@ footer div {
   font-size: 10px;
   line-height: 200%;
 }
-
 .terms-conditions {
   font-size: 8px;
 }
