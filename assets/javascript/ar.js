@@ -57,57 +57,15 @@ function initAccordion(accordionElem) {
 }
 initAccordion(document.getElementById("accordion"));
 
-// function noClass() {
-//   document.getElementById("action-image").className = ''.className = ".action-section__image-container ";
-// }
+/* Slideshows */
 
-// function emailAction() {
-//   document.getElementById("action-image").className = ''.className = ".action-section__image-container action-email";
-// }
-
-// function laptopAction() {
-//   document.getElementById("action-image").className = ''.className = ".action-section__image-container action-laptop";
-// }
-
-// function patchingAction() {
-//   document.getElementById("action-image").className = ''.className = ".action-section__image-container action-patching";
-// }
-
-// Slideshow
-
-// var slideIndex = 1;
-// showSlides(slideIndex);
-
-// // Next/previous controls
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-
-// function showSlides(n) {
-//   var i;
-//   var slides = document.getElementsByClassName("mySlides");
-//   if (n > slides.length) { slideIndex = 1 }
-//   if (n < 1) { slideIndex = slides.length }
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   slides[slideIndex - 1].style.display = "block";
-// // };
-
-// function noClass() {
-//   document.getElementById("action-image").style.display ;
-// }
-
-// function emailAction() {
-//   document.getElementById("action-image").className = ''.className = ".action-section__image-container action-email";
-// }
-
-
-var slideIndex = [1,1, 1];
-var slideId = ["mySlides1", "mySlides2", "mySlides3"]
+var slideIndex = [1, 1, 1, 1, 1];
+var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5"]
 showDivs(1, 0);
 showDivs(1, 1);
 showDivs(1, 2);
+showDivs(2, 3);
+showDivs(3, 4);
 
 function plusDivs(n, no) {
   showDivs(slideIndex[no] += n, no);
@@ -116,31 +74,45 @@ function plusDivs(n, no) {
 function showDivs(n, no) {
   var i;
   var x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) {slideIndex[no] = 1}    
-  if (n < 1) {slideIndex[no] = x.length}
+  if (n > x.length) { slideIndex[no] = 1 }
+  if (n < 1) { slideIndex[no] = x.length }
   for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
+    x[i].style.display = "none";
   }
-  x[slideIndex[no]-1].style.display = "block";  
+  x[slideIndex[no] - 1].style.display = "block";
 }
 
 /*Change slideshow */
 
-function allHiden () {
-  var myDiv = document.querySelector(".action-section__image-container");
-  myDiv.classList.toggle('hide-slideshow');
+function allHidden() {
+var divs = document.querySelectorAll('.action-section__image-container');
+  for (var i = 0; i < divs.length; i++) {
+      divs[i].classList.add('hide-slideshow');
+      divs[i].classList.remove('show-slideshow');
+  }
 }
 
-
 function laptopAction() {
-  allHiden();
+  allHidden();
   document.getElementById("action-laptop").classList.toggle('show-slideshow');
 }
 
 function emailAction() {
-  allHiden();
+  allHidden();
   // document.getElementById("action-email").style.display = "block";
   document.getElementById("action-email").classList.toggle('show-slideshow');
+}
+
+function threeAction() {
+  allHidden();
+  // document.getElementById("action-email").style.display = "block";
+  document.getElementById("action-3").classList.toggle('show-slideshow');
+}
+
+function fourAction() {
+  allHidden();
+  // document.getElementById("action-email").style.display = "block";
+  document.getElementById("action-4").classList.toggle('show-slideshow');
 }
 
 
@@ -150,3 +122,35 @@ function emailAction() {
 
 
 
+
+
+
+
+// function hideStuff(){
+//   var el = document.querySelector('#Action-Slideshows');
+//   var node, nodes = [];
+  
+//   do {
+//     var parent = el.parentNode;
+    
+//     // Collect element children
+//     for (var i=0, iLen=parent.childNodes.length; i<iLen; i++) {
+//       node = parent.childNodes[i];
+
+//       // Collect only sibling nodes that are elements and not the current element
+//       if (node.nodeType == 1 && node != el) {
+//         nodes.push(node);
+//       }
+//     }
+
+//     // Go up to parent
+//     el = parent;
+
+//   // Stop when processed the body's child nodes
+//   } while (el.tagName.toLowerCase() != 'body');
+
+//   // Hide the collected nodes
+//   nodes.forEach(function(node){
+//     node.style.display = 'none';
+//   });
+// }
