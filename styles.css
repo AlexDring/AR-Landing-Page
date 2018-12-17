@@ -451,110 +451,20 @@ nav .wrapper {
 .slideshow-container {
   position: absolute;
 }
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-/* Next & previous buttons */
-.prev,
-.next {
+
+.slider-right,
+.slider-left {
   cursor: pointer;
-  position: absolute;
-  width: auto;
-  bottom: -50px;
-  padding: 0 35%;
+  padding: 0 8%;
   color: white;
-  font-weight: bold;
   font-size: 38px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
 }
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-/* On hover, add a black background color with a little bit see-through */
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
+
+.arrow-container {
   width: 100%;
   text-align: center;
-}
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-.pulse {
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
+  padding-top: 2%;
 }
 
 @media all and (max-width: 768px) {
@@ -593,12 +503,13 @@ nav .wrapper {
 }
 .action-section__image-container {
   flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .action-section__image-container img {
-  width: 100%;
-  height: 99%;
-  object-fit: cover;
-  overflow: hidden;
+  width: 585px;
 }
 .action-section__text-container {
   flex-basis: 50%;
@@ -627,7 +538,6 @@ nav .wrapper {
   width: 15px;
   color: #4c565b;
 }
-
 
 .hide-slideshow {
   display: none;

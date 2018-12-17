@@ -99,19 +99,16 @@ function laptopAction() {
 
 function emailAction() {
   allHidden();
-  // document.getElementById("action-email").style.display = "block";
   document.getElementById("action-email").classList.toggle('show-slideshow');
 }
 
 function threeAction() {
   allHidden();
-  // document.getElementById("action-email").style.display = "block";
   document.getElementById("action-3").classList.toggle('show-slideshow');
 }
 
 function fourAction() {
   allHidden();
-  // document.getElementById("action-email").style.display = "block";
   document.getElementById("action-4").classList.toggle('show-slideshow');
 }
 

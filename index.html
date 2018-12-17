@@ -147,10 +147,10 @@
             </div>
 
             <!-- Next and previous buttons -->
-            <a class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0)">&#8592;</a>
-            <a class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 0)">&#8594;</a>
-            <a class="prev animated pusle"  onclick="plusDivs(-1)">&#8592;</a>
-            <a class="next animated pulse" onclick="plusDivs(+1)">&#8594;</a>
+            <div class="arrow-container">
+            <a class="slider-left" onclick="plusDivs(-1, 0)">&#8592;</a>
+            <a class="slider-right" onclick="plusDivs(1, 0)">&#8594;</a>
+            </div>
           </div>
           <img src="assets/images/Laptop-Demo.png" alt="" />
         </div>
@@ -159,33 +159,41 @@
     <section class="section action-section">
       <div class="container">
           <div id="action-laptop" class="action-section__image-container">
-              <img style="height:400px" class="mySlides2" src="assets/images/KTSL-in-Action.png">
-              <img style="height:400px" class="mySlides2" src="assets/images/scenario 1_scenario 1 - pos.png">
-              <a class="w3-button w3-display-left" onclick="plusDivs(-1, 1)">&#8592;</a>
-              <a class="w3-button w3-display-right" onclick="plusDivs(1, 1)">&#8594;</a>
+              <img class="mySlides2" src="assets/images/KTSL-in-Action.png">
+              <img class="mySlides2" src="assets/images/scenario 1_scenario 1 - pos.png">
+              <div class="arrow-container">
+              <a class="slider-left" onclick="plusDivs(-1, 1)">&#8592;</a>
+              <a class="slider-right" onclick="plusDivs(1, 1)">&#8594;</a>
+              </div>
           </div>
           <div id="action-email" class="action-section__image-container hide-slideshow">          
-            <img style="height:400px" class="mySlides3" src="assets/images/scenario 2_scenario 1 - AR.png">
-            <img style="height:400px" class="mySlides3" src="assets/images/scenario 2_scenario 1 - neg.png">
-            <img style="height:400px" class="mySlides3" src="assets/images/scenario 2_scenario 1 - pos.png">
-            <a class="w3-button w3-display-left" onclick="plusDivs(-1, 2)">&#8592;</a>
-            <a class="w3-button w3-display-right" onclick="plusDivs(1, 2)">&#8594;</a>
+            <img class="mySlides3" src="assets/images/scenario 2_scenario 1 - AR.png">
+            <img class="mySlides3" src="assets/images/scenario 2_scenario 1 - neg.png">
+            <img class="mySlides3" src="assets/images/scenario 2_scenario 1 - pos.png">
+            <div class="arrow-container">
+            <a class="slider-left" onclick="plusDivs(-1, 2)">&#8592;</a>
+            <a class="slider-right" onclick="plusDivs(1, 2)">&#8594;</a>
+            </div>
           </div>
           <div id="action-3" class="action-section__image-container hide-slideshow">          
-            <img style="height:400px" class="mySlides4" src="assets/images/scenario 3_scenario 3 - AR1.png">
-            <img style="height:400px" class="mySlides4" src="assets/images/scenario 3_scenario 3 - neg.png">
-            <img style="height:400px" class="mySlides4" src="assets/images/scenario 3_scenario 3 - pos.png">
-            <img style="height:400px" class="mySlides4" src="assets/images/scenario 3_scenario 3- AR2.png">
-            <a class="w3-button w3-display-left" onclick="plusDivs(-1, 2)">&#8592;</a>
-            <a class="w3-button w3-display-right" onclick="plusDivs(1, 2)">&#8594;</a>
+            <img class="mySlides4" src="assets/images/scenario 3_scenario 3 - AR1.png">
+            <img class="mySlides4" src="assets/images/scenario 3_scenario 3 - neg.png">
+            <img  class="mySlides4" src="assets/images/scenario 3_scenario 3 - pos.png">
+            <img  class="mySlides4" src="assets/images/scenario 3_scenario 3- AR2.png">
+            <div class="arrow-container">
+            <a class="slider-left" onclick="plusDivs(-1, 3)">&#8592;</a>
+            <a class="slider-right" onclick="plusDivs(1, 3)">&#8594;</a>
+            </div>
           </div>
           <div id="action-4" class="action-section__image-container hide-slideshow">          
-            <img style="height:400px" class="mySlides5" src="assets/images/scenario 2_scenario 1 - AR.png">
-            <img style="height:400px" class="mySlides5" src="assets/images/scenario 2_scenario 1 - neg.png">
-            <img style="height:400px" class="mySlides5" src="assets/images/scenario 2_scenario 1 - pos.png">
-            <a class="w3-button w3-display-left" onclick="plusDivs(-1, 2)">&#8592;</a>
-            <a class="w3-button w3-display-right" onclick="plusDivs(1, 2)">&#8594;</a>
-            </div>
+            <img  class="mySlides5" src="assets/images/scenario 4_scenario 4 - AR.png">
+            <img class="mySlides5" src="assets/images/scenario 4_scenario 4 - neg.png">
+            <img  class="mySlides5" src="assets/images/scenario 4_scenario 4 - pos.png">
+            <div class="arrow-container">
+              <a class="slider-left" onclick="plusDivs(-1, 4)">&#8592;</a>
+              <a class="slider-right" onclick="plusDivs(1, 4)">&#8594;</a>
+           </div>
+          </div>
         <div class="action-section__text-container">
           <h2 id="action">KTSL in action</h2>
           <p>Click a use case to see more</p>
