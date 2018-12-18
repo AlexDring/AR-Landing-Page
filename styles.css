@@ -49,6 +49,7 @@ html {
 body {
   font-family: "Gotham", Arial, Helvetica, sans-serif;
   margin: 0;
+  overflow-x: hidden;
 }
 
 p {
@@ -509,6 +510,7 @@ nav .wrapper {
 }
 .action-section__image-container img {
   max-width: 100%;
+  margin: 0 auto;
 }
 .action-section__text-container {
   flex-basis: 50%;
@@ -539,9 +541,11 @@ nav .wrapper {
 }
 .hide-slideshow {
   display: none;
+  margin: auto 0;
 }
 .show-slideshow {
   display: block;
+  margin: auto 0;
 }
 /* * This class will hide all the body by default * */
 #accordion .acc-body {
@@ -644,6 +648,7 @@ nav .wrapper {
 @media all and (max-width: 768px) {
   .benefits-section__title h3 {
     width: 75%;
+    font-size: 30px;
   }
   .benefits-section {
     padding: 10% 0;
