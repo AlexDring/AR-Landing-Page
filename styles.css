@@ -451,22 +451,21 @@ nav .wrapper {
 .slideshow-container {
   position: absolute;
 }
-
 .slider-right,
 .slider-left {
   cursor: pointer;
   padding: 0 8%;
   color: white;
-  font-size: 38px;
+  font-size: 50px;
   user-select: none;
 }
-
 .arrow-container {
   width: 100%;
   text-align: center;
-  padding-top: 2%;
 }
-
+.pulse {
+  animation-iteration-count: infinite;
+}
 @media all and (max-width: 768px) {
   .app-section__text-container {
     flex-basis: 90%;
@@ -509,7 +508,7 @@ nav .wrapper {
   justify-content: center;
 }
 .action-section__image-container img {
-  width: 585px;
+  max-width: 100%;
 }
 .action-section__text-container {
   flex-basis: 50%;
@@ -538,15 +537,12 @@ nav .wrapper {
   width: 15px;
   color: #4c565b;
 }
-
 .hide-slideshow {
   display: none;
 }
-
 .show-slideshow {
   display: block;
 }
-
 /* * This class will hide all the body by default * */
 #accordion .acc-body {
   display: none;
@@ -645,7 +641,6 @@ nav .wrapper {
 .hidden {
   opacity: 0;
 }
-
 @media all and (max-width: 768px) {
   .benefits-section__title h3 {
     width: 75%;
@@ -718,5 +713,61 @@ footer div {
   }
   footer {
     padding: 5%;
+  }
+}
+/* ANIMATIONS *****************************************
+************************************************** */
+.animated {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.animated.fast {
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+@media (prefers-reduced-motion) {
+  .animated {
+    -webkit-animation: unset !important;
+    -webkit-transition: none !important;
+    animation: unset !important;
+    transition: none !important;
   }
 }

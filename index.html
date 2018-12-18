@@ -20,9 +20,9 @@
       integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -148,8 +148,16 @@
 
             <!-- Next and previous buttons -->
             <div class="arrow-container">
-            <a class="slider-left" onclick="plusDivs(-1, 0)">&#8592;</a>
-            <a class="slider-right" onclick="plusDivs(1, 0)">&#8594;</a>
+              <a
+                class="slider-left animated pulse fast"
+                onclick="plusDivs(-1, 0)"
+                >&#8592;</a
+              >
+              <a
+                class="slider-right animated pulse fast"
+                onclick="plusDivs(1, 0)"
+                >&#8594;</a
+              >
             </div>
           </div>
           <img src="assets/images/Laptop-Demo.png" alt="" />
@@ -158,42 +166,100 @@
     </section>
     <section class="section action-section">
       <div class="container">
-          <div id="action-laptop" class="action-section__image-container">
-              <img class="mySlides2" src="assets/images/KTSL-in-Action.png">
-              <img class="mySlides2" src="assets/images/scenario 1_scenario 1 - pos.png">
-              <div class="arrow-container">
-              <a class="slider-left" onclick="plusDivs(-1, 1)">&#8592;</a>
-              <a class="slider-right" onclick="plusDivs(1, 1)">&#8594;</a>
-              </div>
+        <div id="action-laptop" class="action-section__image-container">
+          <img class="mySlides2" src="assets/images/laptop-issues-1.png" />
+          <img
+            class="mySlides2"
+            src="assets/images/laptop-issues-2.png"
+          />
+          <div class="arrow-container">
+            <a class="slider-left animated pulse fast" onclick="plusDivs(-1, 1)"
+              >&#8592;</a
+            >
+            <a class="slider-right animated pulse fast" onclick="plusDivs(1, 1)"
+              >&#8594;</a
+            >
           </div>
-          <div id="action-email" class="action-section__image-container hide-slideshow">          
-            <img class="mySlides3" src="assets/images/scenario 2_scenario 1 - AR.png">
-            <img class="mySlides3" src="assets/images/scenario 2_scenario 1 - neg.png">
-            <img class="mySlides3" src="assets/images/scenario 2_scenario 1 - pos.png">
-            <div class="arrow-container">
-            <a class="slider-left" onclick="plusDivs(-1, 2)">&#8592;</a>
-            <a class="slider-right" onclick="plusDivs(1, 2)">&#8594;</a>
-            </div>
+        </div>
+        <div
+          id="action-email"
+          class="action-section__image-container hide-slideshow"
+        >
+          <img
+            class="mySlides3"
+            src="assets/images/problematic-server-1.png"
+          />
+          <img
+            class="mySlides3"
+            src="assets/images/problematic-server-2.png"
+          />
+          <img
+            class="mySlides3"
+            src="assets/images/problematic-server-3.png"
+          />
+          <div class="arrow-container">
+            <a class="slider-left animated pulse fast" onclick="plusDivs(-1, 2)"
+              >&#8592;</a
+            >
+            <a class="slider-right animated pulse fast" onclick="plusDivs(1, 2)"
+              >&#8594;</a
+            >
           </div>
-          <div id="action-3" class="action-section__image-container hide-slideshow">          
-            <img class="mySlides4" src="assets/images/scenario 3_scenario 3 - AR1.png">
-            <img class="mySlides4" src="assets/images/scenario 3_scenario 3 - neg.png">
-            <img  class="mySlides4" src="assets/images/scenario 3_scenario 3 - pos.png">
-            <img  class="mySlides4" src="assets/images/scenario 3_scenario 3- AR2.png">
-            <div class="arrow-container">
-            <a class="slider-left" onclick="plusDivs(-1, 3)">&#8592;</a>
-            <a class="slider-right" onclick="plusDivs(1, 3)">&#8594;</a>
-            </div>
+        </div>
+        <div
+          id="action-3"
+          class="action-section__image-container hide-slideshow"
+        >
+          <img
+            class="mySlides4"
+            src="assets/images/scenario 3_scenario 3 - AR1.png"
+          />
+          <img
+            class="mySlides4"
+            src="assets/images/scenario 3_scenario 3 - neg.png"
+          />
+          <img
+            class="mySlides4"
+            src="assets/images/scenario 3_scenario 3 - pos.png"
+          />
+          <img
+            class="mySlides4"
+            src="assets/images/scenario 3_scenario 3- AR2.png"
+          />
+          <div class="arrow-container">
+            <a class="slider-left animated pulse fast" onclick="plusDivs(-1, 3)"
+              >&#8592;</a
+            >
+            <a class="slider-right animated pulse fast" onclick="plusDivs(1, 3)"
+              >&#8594;</a
+            >
           </div>
-          <div id="action-4" class="action-section__image-container hide-slideshow">          
-            <img  class="mySlides5" src="assets/images/scenario 4_scenario 4 - AR.png">
-            <img class="mySlides5" src="assets/images/scenario 4_scenario 4 - neg.png">
-            <img  class="mySlides5" src="assets/images/scenario 4_scenario 4 - pos.png">
-            <div class="arrow-container">
-              <a class="slider-left" onclick="plusDivs(-1, 4)">&#8592;</a>
-              <a class="slider-right" onclick="plusDivs(1, 4)">&#8594;</a>
-           </div>
+        </div>
+        <div
+          id="action-4"
+          class="action-section__image-container hide-slideshow"
+        >
+          <img
+            class="mySlides5"
+            src="assets/images/scenario 4_scenario 4 - AR.png"
+          />
+          <img
+            class="mySlides5"
+            src="assets/images/scenario 4_scenario 4 - neg.png"
+          />
+          <img
+            class="mySlides5"
+            src="assets/images/scenario 4_scenario 4 - pos.png"
+          />
+          <div class="arrow-container">
+            <a class="slider-left animated pulse fast" onclick="plusDivs(-1, 4)"
+              >&#8592;</a
+            >
+            <a class="slider-right animated pulse fast" onclick="plusDivs(1, 4)"
+              >&#8594;</a
+            >
           </div>
+        </div>
         <div class="action-section__text-container">
           <h2 id="action">KTSL in action</h2>
           <p>Click a use case to see more</p>
@@ -280,7 +346,11 @@
             <h2 id="benefits" class="title--navy">KTSL AR benefits</h2>
             <h3>Giving you IT InSight, everything’s better with KTSL AR</h3>
           </div>
-          <div class="benefits-section__benefits-container" data-aos="slide-left" data-aos-anchor=".benefits-section__title">
+          <div
+            class="benefits-section__benefits-container"
+            data-aos="slide-right"
+            data-aos-delay="150"
+          >
             <img src="assets/images/Users-Icon.png" alt="" />
             <h4 class="benefits-section__sub-heading">Better for your users</h4>
             <div class="line"></div>
@@ -297,7 +367,11 @@
             <div class="line"></div>
             <p><strong>Increased user satisfaction</strong></p>
           </div>
-          <div class="benefits-section__benefits-container" data-aos="slide-right">
+          <div
+            class="benefits-section__benefits-container"
+            data-aos="slide-left"
+            data-aos-delay="300"
+          >
             <img src="assets/images/ITSM-Team-Icon.png" alt="" />
             <h4 class="benefits-section__sub-heading">
               Better for your ITSM team
@@ -372,7 +446,6 @@
     </footer>
     <script src="assets/javascript/ar.js" async defer></script>
   </body>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
