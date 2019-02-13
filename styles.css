@@ -450,7 +450,7 @@ a {
 
 .body-text__large {
   font-size: 26px;
-  margin-bottom: 2rem;
+  margin-bottom: 60px;
 }
 
 li {
@@ -458,13 +458,14 @@ li {
 }
 
 h1 {
-  font-size: 52px;
+  font-size: 58px;
   color: white;
   margin-bottom: 0.6em;
 }
 
 h2 {
   font-size: 36px;
+  line-height: 115%;
 }
 
 h3 {
@@ -481,6 +482,11 @@ h4 {
   color: #1c0c3a;
   font-size: 48px;
   margin-bottom: 2rem;
+}
+.title--white {
+  color: #ffffff;
+  font-size: 48px;
+  margin-bottom: 80px;
 }
 
 @media all and (max-width: 376px) {
@@ -500,7 +506,7 @@ h4 {
 
 .button {
   cursor: pointer;
-  border: 2px solid;
+  border: 3px solid;
   border-radius: 50px;
   padding: 0 75px;
   height: 50px;
@@ -585,7 +591,7 @@ ul {
 }
 
 .ie-padding {
-  padding-left: 12.5%;
+  padding-left: 6%;
 }
 
 /* HEADER *****************************************
@@ -776,8 +782,20 @@ nav .wrapper {
 }
 /* HERO *****************************************
 ************************************************** */
-.hero-section {
+.color--orange {
+  background-color: #f23d29;
+}
+.color--blue {
   background-color: #00c2d6;
+}
+.color--dark-blue {
+  color: #0d7d8a;
+}
+.color--navy {
+  background-color: #1c0d3b;
+}
+
+.hero-section {
   background-image: url(http://localhost:3000/assets/images/Header-Pattern.png);
   background-repeat: no-repeat;
   background-position: 4px -200px;
@@ -793,19 +811,21 @@ nav .wrapper {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%;
+  height: 700px;
 }
 .hero__text-container {
-  -ms-flex-preferred-size: 45%;
-  flex-basis: 45%;
-  margin: 50px auto 75px auto;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  align-self: center;
 }
 .hero__text-container h1 {
   width: 90%;
+  margin-top: 0;
 }
 .hero__image-containter {
-  margin: auto;
-  -ms-flex-preferred-size: 55%;
-  flex-basis: 55%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  align-self: flex-end;
 }
 .hero__image-containter img {
   max-width: 100%;
@@ -817,11 +837,11 @@ nav .wrapper {
 .arrow-down {
   width: 0;
   height: 0;
-  border-left: 120px solid transparent;
-  border-right: 120px solid transparent;
-  border-top: 40px solid #00c1d6;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 30px solid #f23d29;
   position: absolute;
-  bottom: -40px;
+  bottom: -30px;
 }
 @media all and (max-width: 1100px) {
   .hero-section {
@@ -874,6 +894,10 @@ nav .wrapper {
 .overview-section {
   padding: 2rem 0;
 }
+.overview-section__bsc {
+  width: 70%;
+  margin: 30px auto 10px auto;
+}
 .overview-section h2 {
   color: #fa5c1c;
 }
@@ -914,13 +938,10 @@ nav .wrapper {
 /* APP *****************************************
 ************************************************** */
 .app-section {
-  background-color: #f23d29;
   color: white;
   padding: 5% 0;
 }
-.app-section h2 {
-  color: #fa8c40;
-}
+
 .app-section__text-container {
   -ms-flex-preferred-size: 42.5%;
   flex-basis: 42.5%;
@@ -1106,7 +1127,7 @@ nav .wrapper {
 /* BENEFITS *****************************************
 ************************************************** */
 .benefits-section {
-  background-color: #00c2d6;
+  background-color: #1c0d3b;
   color: white;
   -webkit-box-shadow: 0 8px 10px -6px #00000094;
   box-shadow: 0 8px 10px -6px #00000094;
