@@ -4,70 +4,1379 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!-- [if gt IE 8]><! -->
 <html class="no-js" lang="en">
-  <!-- <![endif] -->
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Augmented Reality | KTSL</title>
-    <meta
-      name="description"
-      content="Get IT Insight with the KTSL AR app | See how you can dramatically improve user experiences and ITSM efficiency with KTSL augmented reality."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
-      integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
-      crossorigin="anonymous"
-    /> -->
-    <link rel="stylesheet" href="styles.css" type="text/css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2546135-3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-  
-      gtag('config', 'UA-2546135-3');
-      </script>
-  </head>
-  <body>
-    <!--[if lt IE 7]>
+<!-- <![endif] -->
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Augmented Reality | KTSL</title>
+  <meta name="description" content="Get IT Insight with the KTSL AR app | See how you can dramatically improve user experiences and ITSM efficiency with KTSL augmented reality." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2546135-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-2546135-3');
+  </script>
+  <style>@font-face {
+      font-family: "Gotham";
+      src: local("assets/fonts/Gotham-Book"),
+        url("assets/fonts/Gotham-Book.woff2") format("woff2"),
+        url("assets/fonts/Gotham-Book.woff") format("woff"),
+        url("assets/fonts/Gotham-Book.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Gotham";
+      src: local("assets/fonts/Gotham-Medium"),
+        url("assets/fonts/Gotham-Medium.woff2") format("woff2"),
+        url("assets/fonts/Gotham-Medium.woff") format("woff"),
+        url("assets/fonts/Gotham-Medium.ttf") format("truetype");
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Gotham";
+      src: local("assets/fonts/Gotham-Black"),
+        url("assets/fonts/Gotham-Black.woff2") format("woff2"),
+        url("assets/fonts/Gotham-Black.woff") format("woff"),
+        url("assets/fonts/Gotham-Black.ttf") format("truetype");
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Gotham";
+      src: local("assets/fonts/Gotham-BookItalic"),
+        url("assets/fonts/Gotham-BookItalic.woff2") format("woff2"),
+        url("assets/fonts/Gotham-BookItalic.woff") format("woff"),
+        url("assets/fonts/Gotham-BookItalic.ttf") format("truetype");
+      font-weight: 500;
+      font-style: italic;
+    }
+    @font-face {
+      font-family: "icomoon";
+      src: url("assets/fonts/fonts/icomoon.eot?8u9aw0");
+      src: url("assets/fonts/fonts/icomoon.eot?8u9aw0#iefix")
+          format("embedded-opentype"),
+        url("assets/fonts/fonts/icomoon.ttf?8u9aw0") format("truetype"),
+        url("assets/fonts/fonts/icomoon.woff?8u9aw0") format("woff"),
+        url("assets/fonts/fonts/icomoon.svg?8u9aw0#icomoon") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    [class^="icon-"],
+    [class*=" icon-"] {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: "icomoon" !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+    
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .icon-check-circle-o:before {
+      content: "\e900";
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+    
+    /* Document
+       ========================================================================== */
+    
+    /**
+     * 1. Correct the line height in all browsers.
+     * 2. Prevent adjustments of font size after orientation changes in iOS.
+     */
+    
+    html {
+      line-height: 1.15; /* 1 */
+      -webkit-text-size-adjust: 100%; /* 2 */
+    }
+    
+    /* Sections
+       ========================================================================== */
+    
+    /**
+     * Remove the margin in all browsers.
+     */
+    
+    body {
+      margin: 0;
+    }
+    
+    /**
+     * Render the `main` element consistently in IE.
+     */
+    
+    main {
+      display: block;
+    }
+    
+    /**
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
+     */
+    
+    h1 {
+      font-size: 2em;
+      margin: 0.67em 0;
+    }
+    
+    /* Grouping content
+       ========================================================================== */
+    
+    /**
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
+     */
+    
+    hr {
+      box-sizing: content-box; /* 1 */
+      height: 0; /* 1 */
+      overflow: visible; /* 2 */
+    }
+    
+    /**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+    
+    pre {
+      font-family: monospace, monospace; /* 1 */
+      font-size: 1em; /* 2 */
+    }
+    
+    /* Text-level semantics
+       ========================================================================== */
+    
+    /**
+     * Remove the gray background on active links in IE 10.
+     */
+    
+    a {
+      background-color: transparent;
+    }
+    
+    /**
+     * 1. Remove the bottom border in Chrome 57-
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+     */
+    
+    abbr[title] {
+      border-bottom: none; /* 1 */
+      text-decoration: underline; /* 2 */
+      text-decoration: underline dotted; /* 2 */
+    }
+    
+    /**
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
+    
+    b,
+    strong {
+      font-weight: bolder;
+    }
+    
+    /**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+    
+    code,
+    kbd,
+    samp {
+      font-family: monospace, monospace; /* 1 */
+      font-size: 1em; /* 2 */
+    }
+    
+    /**
+     * Add the correct font size in all browsers.
+     */
+    
+    small {
+      font-size: 80%;
+    }
+    
+    /**
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
+     */
+    
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+    
+    sub {
+      bottom: -0.25em;
+    }
+    
+    sup {
+      top: -0.5em;
+    }
+    
+    /* Embedded content
+       ========================================================================== */
+    
+    /**
+     * Remove the border on images inside links in IE 10.
+     */
+    
+    img {
+      border-style: none;
+    }
+    
+    /* Forms
+       ========================================================================== */
+    
+    /**
+     * 1. Change the font styles in all browsers.
+     * 2. Remove the margin in Firefox and Safari.
+     */
+    
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit; /* 1 */
+      font-size: 100%; /* 1 */
+      line-height: 1.15; /* 1 */
+      margin: 0; /* 2 */
+    }
+    
+    /**
+     * Show the overflow in IE.
+     * 1. Show the overflow in Edge.
+     */
+    
+    button,
+    input {
+      /* 1 */
+      overflow: visible;
+    }
+    
+    /**
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
+    
+    button,
+    select {
+      /* 1 */
+      text-transform: none;
+    }
+    
+    /**
+     * Correct the inability to style clickable types in iOS and Safari.
+     */
+    
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+    
+    /**
+     * Remove the inner border and padding in Firefox.
+     */
+    
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+    
+    /**
+     * Restore the focus styles unset by the previous rule.
+     */
+    
+    button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
+      outline: 1px dotted ButtonText;
+    }
+    
+    /**
+     * Correct the padding in Firefox.
+     */
+    
+    fieldset {
+      padding: 0.35em 0.75em 0.625em;
+    }
+    
+    /**
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from `fieldset` elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    `fieldset` elements in all browsers.
+     */
+    
+    legend {
+      box-sizing: border-box; /* 1 */
+      color: inherit; /* 2 */
+      display: table; /* 1 */
+      max-width: 100%; /* 1 */
+      padding: 0; /* 3 */
+      white-space: normal; /* 1 */
+    }
+    
+    /**
+     * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+    
+    progress {
+      vertical-align: baseline;
+    }
+    
+    /**
+     * Remove the default vertical scrollbar in IE 10+.
+     */
+    
+    textarea {
+      overflow: auto;
+    }
+    
+    /**
+     * 1. Add the correct box sizing in IE 10.
+     * 2. Remove the padding in IE 10.
+     */
+    
+    [type="checkbox"],
+    [type="radio"] {
+      box-sizing: border-box; /* 1 */
+      padding: 0; /* 2 */
+    }
+    
+    /**
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
+    
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
+      height: auto;
+    }
+    
+    /**
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
+    
+    [type="search"] {
+      -webkit-appearance: textfield; /* 1 */
+      outline-offset: -2px; /* 2 */
+    }
+    
+    /**
+     * Remove the inner padding in Chrome and Safari on macOS.
+     */
+    
+    [type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+    
+    /**
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to `inherit` in Safari.
+     */
+    
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button; /* 1 */
+      font: inherit; /* 2 */
+    }
+    
+    /* Interactive
+       ========================================================================== */
+    
+    /*
+     * Add the correct display in Edge, IE 10+, and Firefox.
+     */
+    
+    details {
+      display: block;
+    }
+    
+    /*
+     * Add the correct display in all browsers.
+     */
+    
+    summary {
+      display: list-item;
+    }
+    
+    /* Misc
+       ========================================================================== */
+    
+    /**
+     * Add the correct display in IE 10+.
+     */
+    
+    template {
+      display: none;
+    }
+    
+    /**
+     * Add the correct display in IE 10.
+     */
+    
+    [hidden] {
+      display: none;
+    }
+    
+    /* TYPOGRAPHY *****************************************
+    ***************************************************/
+    
+    html {
+      font-size: 16px;
+    }
+    
+    body {
+      font-family: "Gotham", Arial, Helvetica, sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+    }
+    
+    p {
+      line-height: 130%;
+    }
+    
+    a {
+      display: inline-block;
+      text-decoration: none;
+    }
+    
+    .body-text__opacity {
+      opacity: 0.9;
+    }
+    
+    .body-text__large {
+      font-size: 26px;
+      margin-bottom: 2rem;
+    }
+    
+    li {
+      list-style: none;
+    }
+    
+    h1 {
+      font-size: 52px;
+      color: white;
+      margin-bottom: 0.6em;
+    }
+    
+    h2 {
+      font-size: 36px;
+    }
+    
+    h3 {
+      font-weight: 400;
+      font-size: 22px;
+    }
+    
+    h4 {
+      font-weight: 400;
+      font-size: 22px;
+    }
+    
+    .title--navy {
+      color: #1c0c3a;
+      font-size: 48px;
+      margin-bottom: 2rem;
+    }
+    
+    @media all and (max-width: 376px) {
+      h1 {
+        font-size: 42px;
+      }
+      .body-text__large {
+        font-size: 24px;
+      }
+      .title--navy {
+        font-size: 38px;
+      }
+    }
+    
+    /* BUTTON *****************************************
+    ***************************************************/
+    
+    .button {
+      cursor: pointer;
+      border: 2px solid;
+      border-radius: 50px;
+      padding: 0 75px;
+      height: 50px;
+      line-height: 50px;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+    
+    .button--small {
+      padding: 0 14px;
+      font-size: 11px;
+      color: #0099d9;
+      height: 30px;
+      line-height: 30px;
+    }
+    
+    .button--red {
+      color: #fa5c1c;
+      margin-top: 2rem;
+    }
+    
+    .button--black {
+      color: #4c565b;
+      margin: 2rem 0;
+    }
+    
+    ul {
+      padding: 0;
+    }
+    
+    .line {
+      height: 2px;
+      background-color: white;
+      width: 60%;
+      margin: auto;
+    }
+    
+    .line__long {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    
+    .line__small {
+      height: 1px;
+      background-color: #4c565b;
+      margin-bottom: 0;
+    }
+    
+    @media all and (max-width: 768px) {
+      .line {
+        width: 40%;
+      }
+      .line__long {
+        width: 95%;
+      }
+    }
+    
+    @media all and (max-width: 367px) {
+      .button {
+        padding: 0 55px;
+      }
+    }
+    
+    .container {
+      max-width: 1170px;
+      margin: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+    
+    .section {
+      width: 100%;
+    }
+    
+    .fa-check-circle {
+      padding-right: 15px;
+    }
+    
+    .ie-padding {
+      padding-left: 12.5%;
+    }
+    @media screen and (max-width: 376px) {
+      .ie-padding {
+      padding-left: 0;
+    }
+  }
+    
+    /* HEADER *****************************************
+    ***************************************************/
+    
+    .navBar {
+      background-color: white;
+      font-size: 14px;
+    }
+    
+    .logo {
+      display: inline-block;
+      margin: 0.8em 0;
+    }
+    
+    .logo img {
+      height: 30px;
+      margin-right: auto;
+    }
+    
+    .wrapper {
+      margin: 0 auto;
+      max-width: 1170px;
+      padding: 0 2%;
+    }
+    
+    nav ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      list-style-type: none;
+      width: 75%;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+    nav ul a {
+      display: block;
+      text-decoration: none;
+      color: #161619;
+      border-bottom: 2px solid transparent;
+    }
+    
+    nav ul a:hover {
+      border-bottom: 2px solid #0099d8;
+      padding: 4px 0;
+    }
+    
+    nav ul a.button--small:hover {
+      padding: 0 14px;
+      font-size: 11px;
+      color: #0099d9;
+      height: 30px;
+      line-height: 30px;
+    }
+    
+    nav li {
+      display: inline-block;
+    }
+    nav #menu-toggle {
+      display: none;
+    }
+    nav .label-toggle {
+      display: none;
+    }
+    
+    nav .wrapper {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+    
+    @media screen and (max-width: 768px) {
+      nav ul a {
+        color: #262628;
+        width: 50%;
+        margin: auto;
+      }
+      nav ul {
+        background-color: white;
+        margin: 0;
+        display: block;
+        height: 0;
+        list-style-type: none;
+        opacity: 0;
+        text-align: center;
+        width: 100%;
+        visibility: hidden;
+        padding: 0;
+      }
+      .logo img {
+        height: 45px;
+        margin-right: auto;
+      }
+      nav li {
+        border-bottom: 1px solid #53354a;
+        color: #262628;
+        display: block;
+        font-size: 1em;
+        padding: 1.5em 0;
+      }
+      nav #menu-toggle:checked ~ ul {
+        opacity: 1;
+        height: 100%;
+        visibility: visible;
+      }
+      nav .label-toggle {
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from(#262628),
+          color-stop(20%, #262628),
+          color-stop(20%, transparent),
+          color-stop(40%, transparent),
+          color-stop(40%, #262628),
+          color-stop(60%, #262628),
+          color-stop(60%, transparent),
+          color-stop(80%, transparent),
+          color-stop(80%, #262628),
+          to(#262628)
+        );
+        background: -webkit-linear-gradient(
+          top,
+          #262628 0%,
+          #262628 20%,
+          transparent 20%,
+          transparent 40%,
+          #262628 40%,
+          #262628 60%,
+          transparent 60%,
+          transparent 80%,
+          #262628 80%,
+          #262628 100%
+        );
+        background: -o-linear-gradient(
+          top,
+          #262628 0%,
+          #262628 20%,
+          transparent 20%,
+          transparent 40%,
+          #262628 40%,
+          #262628 60%,
+          transparent 60%,
+          transparent 80%,
+          #262628 80%,
+          #262628 100%
+        );
+        background: linear-gradient(
+          to bottom,
+          #262628 0%,
+          #262628 20%,
+          transparent 20%,
+          transparent 40%,
+          #262628 40%,
+          #262628 60%,
+          transparent 60%,
+          transparent 80%,
+          #262628 80%,
+          #262628 100%
+        );
+        cursor: pointer;
+        display: block;
+        float: right;
+        height: 35px;
+        margin-top: 2em;
+        width: 35px;
+      }
+      nav .wrapper {
+        display: block;
+      }
+    }
+    @media screen and (max-width: 376px) {
+      nav ul a {
+        color: #262628;
+        width: 85%;
+        margin: auto;
+      }
+    }
+    /* HERO *****************************************
+    ************************************************** */
+    .hero-section {
+      background-color: #00c2d6;
+      background-image: url(https://ar.ktsl.com/assets/images/Header-Pattern.png);
+      background-repeat: no-repeat;
+      background-position: 4px -200px;
+      background-size: 600px;
+      position: relative;
+    }
+    .hero {
+      color: white;
+      font-size: 24px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .hero__text-container {
+      -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+      margin: 50px auto 75px auto;
+    }
+    .hero__text-container h1 {
+      width: 90%;
+    }
+    .hero__image-containter {
+      margin: auto;
+      -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+    }
+    .hero__image-containter img {
+      max-width: 100%;
+      height: 100%;
+      margin: -4px 0;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+    .arrow-down {
+      width: 0;
+      height: 0;
+      border-left: 120px solid transparent;
+      border-right: 120px solid transparent;
+      border-top: 40px solid #00c1d6;
+      position: absolute;
+      bottom: -40px;
+    }
+    @media all and (max-width: 1100px) {
+      .hero-section {
+        background-position: -158px -200px;
+      }
+      .hero__text-container h1 {
+        width: 100%;
+        font-size: 46px;
+      }
+      .body-text__large {
+        font-size: 22px;
+      }
+    }
+    @media all and (max-width: 768px) {
+      .hero__image-containter,
+      .hero__text-container {
+        -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+        text-align: center;
+        padding-left: 0;
+      }
+      .hero-section {
+        background-position: -69px -68px;
+        background-size: 500px;
+      }
+      .hero__image-containter img {
+        height: auto;
+        display: none;
+      }
+    }
+    @media all and (max-width: 376px) {
+      .hero__text-container {
+        text-align: center;
+        padding: 0 2.5%;
+      }
+      .hero__text-container h1 {
+        margin: 0;
+        width: 100%;
+        font-size: 38px;
+      }
+      .arrow-down {
+        border-left: 80px solid transparent;
+        border-right: 80px solid transparent;
+        bottom: -40px;
+        left: 5px;
+      }
+    }
+    /* OVERVIEW *****************************************
+    ************************************************** */
+    .overview-section {
+      padding: 2rem 0;
+    }
+    .overview-section h2 {
+      color: #fa5c1c;
+    }
+    .overview-section__text {
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+      color: #4d575c;
+    }
+    .overview-section__text p {
+      width: 80%;
+    }
+    .overview__image-container {
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+    }
+    .overview__image-container img {
+      max-width: 130%;
+      margin: -35px;
+    }
+    @media all and (max-width: 768px) {
+      .overview-section__text {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        padding: 5%;
+      }
+      .overview-section__text p {
+        width: 90%;
+      }
+      .overview__image-container {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+      }
+      .overview__image-container img {
+        max-width: 100%;
+        margin: auto;
+      }
+    }
+    /* APP *****************************************
+    ************************************************** */
+    .app-section {
+      background-color: #f23d29;
+      color: white;
+      padding: 5% 0;
+    }
+    .app-section h2 {
+      color: #fa8c40;
+    }
+    .app-section__text-container {
+      -ms-flex-preferred-size: 42.5%;
+      flex-basis: 42.5%;
+      line-height: 140%;
+    }
+    .app-section__image-container {
+      margin-top: 70px;
+      -ms-flex-preferred-size: 57.5%;
+      flex-basis: 57.5%;
+      position: relative;
+    }
+    .slideshow-container,
+    .app-section__image-container img {
+      max-width: 100%;
+    }
+    .app-section__bullet-points {
+      margin-bottom: 2rem;
+      padding: 0px;
+    }
+    /* Slideshow container */
+    .slideshow-container {
+      position: absolute;
+    }
+    .slider-right,
+    .slider-left {
+      cursor: pointer;
+      padding: 0 8%;
+      color: white;
+      font-size: 50px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .arrow-container {
+      width: 100%;
+      text-align: center;
+      padding-top: 5%;
+      line-height: 60px;
+    }
+    .pulse {
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    }
+    @media all and (max-width: 768px) {
+      .app-section__text-container {
+        -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+        padding-left: 0;
+        margin: auto;
+        text-align: center;
+      }
+      .app-section__text-container p {
+        width: 100%;
+      }
+      .body-text__opacity > .line__long {
+        margin-left: 0;
+      }
+      .app-section__image-container {
+        -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+        margin: 70px auto;
+        padding-left: 0;
+      }
+    }
+    @media all and (max-width: 376px) {
+      .app-section__image-container {
+        -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+      }
+      .prev,
+      .next {
+        padding: 0px 25%;
+      }
+    }
+    /* APP *****************************************
+    ************************************************** */
+    .action-section {
+      background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(50%, #1c0d3b),
+        color-stop(50%, white)
+      );
+      background: -webkit-linear-gradient(left, #1c0d3b 50%, white 50%);
+      background: -o-linear-gradient(left, #1c0d3b 50%, white 50%);
+      background: linear-gradient(to right, #1c0d3b 50%, white 50%);
+    }
+    .action-section__image-container {
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+    .action-section__image-container img {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    .action-section__text-container {
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+      padding: 2% 0;
+    }
+    .action-section__text-container h2 {
+      color: #00ded9;
+    }
+    /* Style the buttons that are used to open and close the accordion panel */
+    .panel {
+      cursor: pointer;
+      padding: 10px 0;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      -webkit-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s;
+      border-bottom: 1px solid #4c565b;
+      font-size: 18px;
+      line-height: 130%;
+    }
+    .acc-body {
+      font-size: 16px;
+      line-height: 130%;
+    }
+    .accordion__icon {
+      width: 15px;
+      color: #4c565b;
+    }
+    .hide-slideshow {
+      display: none;
+      margin: auto 0;
+    }
+    .show-slideshow {
+      display: block;
+      margin: auto 0;
+    }
+    /* * This class will hide all the body by default * */
+    #accordion .acc-body {
+      display: none;
+    }
+    /* * This class will show the body if it has "active" parent class. "active" class will be added to panel div * */
+    #accordion .active .acc-body {
+      display: block;
+    }
+    @media all and (max-width: 768px) {
+      .action-section__image-container {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        background-color: #1c0d3b;
+        padding: 8%;
+      }
+      .action-section__text-container {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        background-color: white;
+        padding: 6%;
+      }
+      .action-section > .container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+      }
+    }
+    @media all and (max-width: 376px) {
+      .panel {
+        font-size: 16px;
+      }
+      .acc-body {
+        font-size: 14px;
+      }
+    }
+    /* BENEFITS *****************************************
+    ************************************************** */
+    .benefits-section {
+      background-color: #00c2d6;
+      color: white;
+      -webkit-box-shadow: 0 8px 10px -6px #00000094;
+      box-shadow: 0 8px 10px -6px #00000094;
+      position: relative;
+    }
+    .benefits {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 5% 0;
+      width: 100%;
+    }
+    .benefits-section__title {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      text-align: center;
+    }
+    .benefits-section__benefits-container {
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+      text-align: center;
+      list-style-type: none;
+      margin-bottom: 3rem;
+    }
+    .benefits-section__benefits-container img {
+      width: 70px;
+    }
+    .benefits-section__button {
+      margin: auto;
+    }
+    .benefits-section__bullets {
+      line-height: 240%;
+    }
+    .benefits-section__sub-heading {
+      margin: 1rem 0;
+    }
+    .benefits-section__title h3 {
+      font-size: 34px;
+      font-weight: 600;
+      font-style: italic;
+      width: 50%;
+      margin: auto;
+      margin-bottom: 2rem;
+    }
+    /* Fade in divs */
+    @-webkit-keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .fade-in-element {
+      -webkit-animation: fade-in 1.4s;
+      animation: fade-in 1.4s;
+    }
+    .hidden {
+      opacity: 0;
+    }
+    @media all and (max-width: 768px) {
+      .benefits-section__title h3 {
+        width: 75%;
+        font-size: 30px;
+      }
+      .benefits-section {
+        padding: 10% 0;
+      }
+      .benefits-section__benefits-container {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+      }
+    }
+    @media all and (max-width: 376px) {
+      .benefits-section__title h3 {
+        width: 90%;
+        font-size: 26px;
+        margin-bottom: 4rem;
+      }
+    }
+    /* FOOTER *****************************************
+    ************************************************** */
+    footer {
+      background-color: #f2f2f2;
+      z-index: 0;
+      padding: 3rem 0 4rem 0;
+      color: #4c565b;
+    }
+    footer a {
+      color: #4c565b;
+    }
+    footer p,
+    footer ul {
+      margin: 0;
+    }
+    .footer__logo {
+      -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+    }
+    .footer__nav,
+    .footer__address {
+      -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+    }
+    address {
+      font-style: normal;
+    }
+    .footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      height: 100%;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    footer div {
+      font-size: 10px;
+      line-height: 200%;
+    }
+    @media all and (max-width: 768px) {
+      .footer__address,
+      .footer__logo,
+      .footer__nav {
+        -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+      }
+      footer {
+        padding: 5%;
+      }
+    }
+    /* ANIMATIONS *****************************************
+    ************************************************** */
+    .animated {
+      -webkit-animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+    .animated.infinite {
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    }
+    .animated.fast {
+      -webkit-animation-duration: 0.8s;
+      animation-duration: 0.8s;
+    }
+    @-webkit-keyframes pulse {
+      0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+      50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+      to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+    @keyframes pulse {
+      0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+      50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+      to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+    .pulse {
+      -webkit-animation-name: pulse;
+      animation-name: pulse;
+    }
+    @media (prefers-reduced-motion) {
+      .animated {
+        -webkit-animation: unset !important;
+        -webkit-transition: none !important;
+        animation: unset !important;
+        -o-transition: none !important;
+        transition: none !important;
+      }
+    }
+    </style>
+</head>
+
+<body>
+  <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
-    </div>
-    <header>
-      <nav class="navBar">
-        <nav class="wrapper">
-          <div class="logo">
-            <img
-              src="assets/KTSL-logo-2014-no-strapline-1.png"
-              alt="KTSL logo"
-              class="logo"
-            />
-          </div>
-          <!-- Logo -->
-          <input type="checkbox" id="menu-toggle" />
-          <label for="menu-toggle" class="label-toggle"></label>
-          <ul>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#app">KTSL AR app</a></li>
-            <li><a href="#action">KTSL in action</a></li>
-            <li><a href="#benefits">KTSL AR benefits</a></li>
-            <li><a href="https://info.ktsl.com/book-a-demo-ktsl">Contact</a></li>
-            <li><a class="button button--small myBtn">Get started</a></li>
-          </ul>
-        </nav>
+  </div>
+  <header>
+    <nav class="navBar">
+      <nav class="wrapper">
+        <div class="logo">
+          <img src="assets/KTSL-logo-2014-no-strapline-1.png" alt="KTSL logo" class="logo" />
+        </div>
+        <!-- Logo -->
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="label-toggle"></label>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#app">KTSL AR app</a></li>
+          <li><a href="#action">KTSL in action</a></li>
+          <li><a href="#benefits">KTSL AR benefits</a></li>
+          <li><a href="https://info.ktsl.com/book-a-demo-ktsl">Contact</a></li>
+          <li><a href="https://info.ktsl.com/book-a-demo-ktsl" class="button button--small myBtn">Get started</a></li>
+        </ul>
       </nav>
-    </header>
-    <section class="section hero-section">
-      <div class="container">
-        <div class="hero">
-          <div class="hero__text-container arrow_box">
+    </nav>
+  </header>
+  <section class="section hero-section">
+    <div class="container">
+      <div class="hero">
+        <div class="hero__text-container">
+          <div class="ie-padding">
             <h1>Get IT Insight with the KTSL AR app</h1>
             <p class="body-text__opacity body-text__large">
               See how you can dramatically improve user experiences and ITSM
@@ -75,40 +1384,39 @@
             </p>
             <a href="https://info.ktsl.com/book-a-demo-ktsl" class="button">Book a demo</a>
           </div>
-          <div class="hero__image-containter">
-            <img
-              src="assets/images/Augmented-Reality-Header-Image.png"
-              alt="Augmented reality header image"
-            />
-          </div>
         </div>
-        <div class="arrow-down"></div>
-      </div>
-    </section>
-    <section class="section overview-section">
-      <div class="container">
-        <div class="overview__image-container">
-          <img src="assets/images/AR.gif" alt="" class="overview__image" />
-        </div>
-        <div class="overview-section__text">
-          <h2 id="overview">Overview</h2>
-          <p>
-            Faster resolutions. Fewer call-outs. Higher productivity. With the
-            KTSL augmented reality app, ITSM processes become significantly more
-            efficient.
-          </p>
-          <p>
-            Enabling engineers and users to gain visibility of their digital
-            workplace, it reveals vital service information for simpler and
-            speedier resolutions.
-          </p>
-          <a href="https://info.ktsl.com/book-a-demo-ktsl" class="button button--red">Book a demo</a>
+        <div class="hero__image-containter">
+          <img src="assets/images/Augmented-Reality-Header-Image.png" alt="Augmented reality header image" />
         </div>
       </div>
-    </section>
-    <section class="section app-section">
-      <div class="container">
-        <div class="app-section__text-container">
+      <div class="arrow-down"></div>
+    </div>
+  </section>
+  <section class="section overview-section">
+    <div class="container">
+      <div class="overview__image-container">
+        <img src="assets/images/AR.gif" alt="" class="overview__image" alt="Augmented reality animation" />
+      </div>
+      <div class="overview-section__text">
+        <h2 id="overview">Overview</h2>
+        <p>
+          Faster resolutions. Fewer call-outs. Higher productivity. With the
+          KTSL augmented reality app, ITSM processes become significantly more
+          efficient.
+        </p>
+        <p>
+          Enabling engineers and users to gain visibility of their digital
+          workplace, it reveals vital service information for simpler and
+          speedier resolutions.
+        </p>
+        <a href="https://info.ktsl.com/book-a-demo-ktsl" class="button button--red">Book a demo</a>
+      </div>
+    </div>
+  </section>
+  <section class="section app-section">
+    <div class="container">
+      <div class="app-section__text-container">
+        <div class="ie-padding">
           <h2 id="app">KTSL AR app</h2>
           <h3>Make the invisible visible</h3>
           <p class="body-text__opacity">
@@ -119,130 +1427,85 @@
           <div class="line line__long"></div>
           <p class="body-text__opacity">With the KTSL AR app, you can:</p>
           <ul class="app-section__bullet-points body-text__opacity">
-            <li><i class="far fa-check-circle"></i> Improve efficiency</li>
-            <li><i class="far fa-check-circle"></i> Strengthen satisfaction</li>
-            <li><i class="far fa-check-circle"></i> Increase productivity</li>
-            <li><i class="far fa-check-circle"></i> Cut costs</li>
-            <li><i class="far fa-check-circle"></i> Add value</li>
+            <li><i class="icon-check-circle-o"></i> Improve efficiency</li>
+            <li><i class="icon-check-circle-o"></i> Strengthen satisfaction</li>
+            <li><i class="icon-check-circle-o"></i> Increase productivity</li>
+            <li><i class="icon-check-circle-o"></i> Cut costs</li>
+            <li><i class="icon-check-circle-o"></i> Add value</li>
           </ul>
           <a href="https://info.ktsl.com/book-a-demo-ktsl" class="button button--white">Arrange a consultation</a>
         </div>
-        <div class="app-section__image-container">
+      </div>
+      <div class="app-section__image-container">
+        <div class="ie-padding">
           <!-- Slideshow container -->
           <div class="slideshow-container">
             <!-- Full-width images with number and caption text -->
             <div class="mySlides1 fade">
-              <img
-                src="assets/images/Augmented-Reality-Laptop-Demo.png"
-                alt="Augmented reality laptop demo"
-                style="width:100%"
-              />
+              <img src="assets/images/Augmented-Reality-Laptop-Demo.png" alt="Augmented reality laptop demo" style="width:100%" />
             </div>
 
             <div class="mySlides1 fade">
-              <img
-                src="assets/images/Aumented-Reality-Server-Demo.png"
-                alt="Augmented reality server demo"
-                style="width:100%"
-              />
+              <img src="assets/images/Aumented-Reality-Server-Demo.png" alt="Augmented reality server demo" style="width:100%" />
             </div>
 
             <div class="mySlides1 fade">
-              <img
-                src="assets/images/Augmented-Reality-Card-Demo.png"
-                alt="Augmented reality card demo"
-                style="width:100%"
-              />
+              <img src="assets/images/Augmented-Reality-Card-Demo.png" alt="Augmented reality card demo" style="width:100%" />
             </div>
 
             <!-- Next and previous buttons -->
             <div class="arrow-container">
-              <a
-                class="slider-left animated pulse fast"
-                onclick="plusDivs(-1, 0)"
-                >&#8592;</a
-              >
-              <a
-                class="slider-right animated pulse fast"
-                onclick="plusDivs(1, 0)"
-                >&#8594;</a
-              >
+              <a class="slider-left animated pulse fast" onclick="plusDivs(-1, 0)">&#8592;</a>
+              <a class="slider-right animated pulse fast" onclick="plusDivs(1, 0)">&#8594;</a>
             </div>
           </div>
-          <img src="assets/images/Laptop-Demo.png" alt="" />
+          <img src="assets/images/Laptop-Demo.png" alt="Augmented reality laptop demo" />
         </div>
       </div>
-    </section>
-    <section class="section action-section">
-      <div class="container">
-        <div id="action-laptop" class="action-section__image-container">
-          <div>
-            <img class="mySlides2" src="assets/images/laptop-issues-1.png" />
-            <img class="mySlides2" src="assets/images/laptop-issues-2.png" />
-            <div class="arrow-container">
-              <a
-                class="slider-left animated pulse fast"
-                onclick="plusDivs(-1, 1)"
-                >&#8592;</a
-              >
-              <a
-                class="slider-right animated pulse fast"
-                onclick="plusDivs(1, 1)"
-                >&#8594;</a
-              >
-            </div>
-          </div>
-        </div>
-        <div
-          id="action-email"
-          class="action-section__image-container hide-slideshow"
-        >
-          <img class="mySlides3" src="assets/images/problematic-server-1.png" />
-          <img class="mySlides3" src="assets/images/problematic-server-2.png" />
-          <img class="mySlides3" src="assets/images/problematic-server-3.png" />
+    </div>
+  </section>
+  <section class="section action-section">
+    <div class="container">
+      <div id="action-laptop" class="action-section__image-container">
+        <div>
+          <img class="mySlides2" src="assets/images/laptop-issues-1.png" alt="Augmented reality laptop issues" />
+          <img class="mySlides2" src="assets/images/laptop-issues-2.png" alt="Augmented reality laptop issues" />
           <div class="arrow-container">
-            <a class="slider-left animated pulse fast" onclick="plusDivs(-1, 2)"
-              >&#8592;</a
-            >
-            <a class="slider-right animated pulse fast" onclick="plusDivs(1, 2)"
-              >&#8594;</a
-            >
+            <a class="slider-left animated pulse fast" onclick="plusDivs(-1, 1)">&#8592;</a>
+            <a class="slider-right animated pulse fast" onclick="plusDivs(1, 1)">&#8594;</a>
           </div>
         </div>
-        <div
-          id="action-3"
-          class="action-section__image-container hide-slideshow"
-        >
-          <img class="mySlides4" src="assets/images/patching-server-1.png" />
-          <img class="mySlides4" src="assets/images/patching-server-2.png" />
-          <img class="mySlides4" src="assets/images/patching-server-3.png" />
-          <img class="mySlides4" src="assets/images/patching-server-4.png" />
-          <div class="arrow-container">
-            <a class="slider-left animated pulse fast" onclick="plusDivs(-1, 3)"
-              >&#8592;</a
-            >
-            <a class="slider-right animated pulse fast" onclick="plusDivs(1, 3)"
-              >&#8594;</a
-            >
-          </div>
+      </div>
+      <div id="action-email" class="action-section__image-container hide-slideshow">
+        <img class="mySlides3" src="assets/images/problematic-server-1.png" alt="Augmented reality server issues" />
+        <img class="mySlides3" src="assets/images/problematic-server-2.png" alt="Augmented reality server issues" />
+        <img class="mySlides3" src="assets/images/problematic-server-3.png" alt="Augmented reality server issues" />
+        <div class="arrow-container">
+          <a class="slider-left animated pulse fast" onclick="plusDivs(-1, 2)">&#8592;</a>
+          <a class="slider-right animated pulse fast" onclick="plusDivs(1, 2)">&#8594;</a>
         </div>
-        <div
-          id="action-4"
-          class="action-section__image-container hide-slideshow"
-        >
-          <img class="mySlides5" src="assets/images/email-failure-1.png" />
-          <img class="mySlides5" src="assets/images/email-failure-2.png" />
-          <img class="mySlides5" src="assets/images/email-failure-3.png" />
-          <div class="arrow-container">
-            <a class="slider-left animated pulse fast" onclick="plusDivs(-1, 4)"
-              >&#8592;</a
-            >
-            <a class="slider-right animated pulse fast" onclick="plusDivs(1, 4)"
-              >&#8594;</a
-            >
-          </div>
+      </div>
+      <div id="action-3" class="action-section__image-container hide-slideshow">
+        <img class="mySlides4" src="assets/images/patching-server-1.png" alt="Augmented reality server issues" />
+        <img class="mySlides4" src="assets/images/patching-server-2.png" alt="Augmented reality server issues" />
+        <img class="mySlides4" src="assets/images/patching-server-3.png" alt="Augmented reality server issues" />
+        <img class="mySlides4" src="assets/images/patching-server-4.png" alt="Augmented reality server issues" />
+        <div class="arrow-container">
+          <a class="slider-left animated pulse fast" onclick="plusDivs(-1, 3)">&#8592;</a>
+          <a class="slider-right animated pulse fast" onclick="plusDivs(1, 3)">&#8594;</a>
         </div>
-        <div class="action-section__text-container">
+      </div>
+      <div id="action-4" class="action-section__image-container hide-slideshow">
+        <img class="mySlides5" src="assets/images/email-failure-1.png" alt="Augmented reality email issues" />
+        <img class="mySlides5" src="assets/images/email-failure-2.png" alt="Augmented reality email issues" />
+        <img class="mySlides5" src="assets/images/email-failure-3.png" alt="Augmented reality email issues" />
+        <div class="arrow-container">
+          <a class="slider-left animated pulse fast" onclick="plusDivs(-1, 4)">&#8592;</a>
+          <a class="slider-right animated pulse fast" onclick="plusDivs(1, 4)">&#8594;</a>
+        </div>
+      </div>
+      <div class="action-section__text-container">
+        <div class="ie-padding">
           <h2 id="action">KTSL in action</h2>
           <p>Click a use case to see more</p>
 
@@ -251,69 +1514,53 @@
               <!-- first panel -->
               <div class="acc-header">
                 User laptop issues
-                <img
-                  src="assets/cheveron-down.svg"
-                  alt=""
-                  class="accordion__icon"
-                />
+                <img src="assets/cheveron-down.svg" alt="chevron" class="accordion__icon" />
               </div>
               <div class="acc-body">
                 <p>Outlook is not working on a frustrated user’s laptop. He just
-                waves his phone over the KTSL mark on his laptop to reveal all
-                the information needed to fix the problem or log an
-                information-rich ticket with ITSM.</p>
+                  waves his phone over the KTSL mark on his laptop to reveal all
+                  the information needed to fix the problem or log an
+                  information-rich ticket with ITSM.</p>
               </div>
             </div>
             <div class="panel" onclick="emailAction()">
               <!-- second panel -->
               <div class="acc-header">
                 Identifying a problematic server
-                <img
-                  src="assets/cheveron-down.svg"
-                  alt=""
-                  class="accordion__icon"
-                />
+                <img src="assets/cheveron-down.svg" alt="chevron" class="accordion__icon" />
               </div>
               <div class="acc-body">
                 <p>A server in a rack needs maintenance. Turning off the wrong one
-                could critically impact the business. The engineer simply waves
-                his phone over the KTSL mark on each server to instantly see
-                what it is and its system status.</p>
+                  could critically impact the business. The engineer simply waves
+                  his phone over the KTSL mark on each server to instantly see
+                  what it is and its system status.</p>
               </div>
             </div>
             <div class="panel" onclick="threeAction()">
               <!-- third panel -->
               <div class="acc-header">
                 Patching a server to a network point
-                <img
-                  src="assets/cheveron-down.svg"
-                  alt=""
-                  class="accordion__icon"
-                />
+                <img src="assets/cheveron-down.svg" alt="chevron" class="accordion__icon" />
               </div>
               <div class="acc-body">
                 <p>An engineer is faced with a confusion of cables. He simply waves
                   his phone over the switch, providing shared access to a live
                   picture, which the network manager draws over to show which
                   cable goes into which network point.</p>
-                </div>
+              </div>
             </div>
             <div class="panel" onclick="fourAction()">
               <!-- third panel -->
               <div class="acc-header">
                 Email system failure
-                <img
-                  src="assets/cheveron-down.svg"
-                  alt=""
-                  class="accordion__icon"
-                />
+                <img src="assets/cheveron-down.svg" alt="chevron" class="accordion__icon" />
               </div>
               <div class="acc-body">
                 <p>
-                The email system in a busy office goes down with no obvious
-                reason why. A simple swipe of a phone instantly reveals what the
-                problem is and that it will be resolved after lunch. To minimise
-                downtime, the office takes lunch early.</p>
+                  The email system in a busy office goes down with no obvious
+                  reason why. A simple swipe of a phone instantly reveals what the
+                  problem is and that it will be resolved after lunch. To minimise
+                  downtime, the office takes lunch early.</p>
               </div>
             </div>
           </div>
@@ -321,101 +1568,94 @@
           <a href="https://info.ktsl.com/book-a-demo-ktsl" class="button button--black">Find out more</a>
         </div>
       </div>
-    </section>
-    <section class="section benefits-section">
-      <div class="container">
-        <div class="benefits">
-          <div class="benefits-section__title">
-            <h2 id="benefits" class="title--navy">KTSL AR benefits</h2>
-            <h3>Giving you IT InSight, everything’s better with KTSL AR</h3>
-          </div>
-          <div
-            class="benefits-section__benefits-container"
-            data-aos="fade-right"
-            data-aos-delay="150"
-          >
-            <img src="assets/images/Users-Icon.png" alt="" />
-            <h4 class="benefits-section__sub-heading">Better for your users</h4>
-            <div class="line"></div>
-            <ul class="benefits-section__bullets">
-              <li>
-                <i class="far fa-check-circle"></i> Faster resolution times
-              </li>
-              <li>
-                <i class="icon-check-circle-o"></i> Higher first-time fix rates
-              </li>
-              <li><i class="far fa-check-circle"></i> Less downtime</li>
-              <li><i class="far fa-check-circle"></i> More productivity</li>
-            </ul>
-            <div class="line"></div>
-            <p><strong>Increased user satisfaction</strong></p>
-          </div>
-          <div
-            class="benefits-section__benefits-container"
-            data-aos="fade-left"
-            data-aos-delay="300"
-          >
-            <img src="assets/images/ITSM-Team-Icon.png" alt="" />
-            <h4 class="benefits-section__sub-heading">
-              Better for your ITSM team
-            </h4>
-            <div class="line"></div>
-            <ul class="benefits-section__bullets">
-              <li>
-                <i class="far fa-check-circle"></i> Get it right first time,
-                right away
-              </li>
-              <li>
-                <i class="far fa-check-circle"></i> Scale up your expertise and
-                resource availability
-              </li>
-              <li>
-                <i class="far fa-check-circle"></i> Minimise support costs
-              </li>
-              <li>
-                <i class="far fa-check-circle"></i> Reduce training required
-              </li>
-            </ul>
-            <div class="line"></div>
-            <p><strong>ITSM efficiency</strong></p>
-          </div>
-          <a href="https://info.ktsl.com/book-a-demo-ktsl" class="button button--white benefits-section__button"
-            >Arrange a consultation</a
-          >
+    </div>
+  </section>
+  <section class="section benefits-section">
+    <div class="container">
+      <div class="benefits">
+        <div class="benefits-section__title">
+          <h2 id="benefits" class="title--navy">KTSL AR benefits</h2>
+          <h3>Giving you IT InSight, everything’s better with KTSL AR</h3>
+        </div>
+        <div class="benefits-section__benefits-container" data-aos="fade-right" data-aos-delay="150">
+          <img src="assets/images/Users-Icon.png" alt="IT Users Icon" />
+          <h4 class="benefits-section__sub-heading">Better for your users</h4>
+          <div class="line"></div>
+          <ul class="benefits-section__bullets">
+            <li>
+              <i class="icon-check-circle-o"></i> Faster resolution times
+            </li>
+            <li>
+              <i class="icon-check-circle-o"></i> Higher first-time fix rates
+            </li>
+            <li><i class="icon-check-circle-o"></i> Less downtime</li>
+            <li><i class="icon-check-circle-o"></i> More productivity</li>
+          </ul>
+          <div class="line"></div>
+          <p><strong>Increased user satisfaction</strong></p>
+        </div>
+        <div class="benefits-section__benefits-container" data-aos="fade-left" data-aos-delay="300">
+          <img src="assets/images/ITSM-Team-Icon.png" alt="ITSM Team Icon" />
+          <h4 class="benefits-section__sub-heading">
+            Better for your ITSM team
+          </h4>
+          <div class="line"></div>
+          <ul class="benefits-section__bullets">
+            <li>
+              <i class="icon-check-circle-o"></i> Get it right first time,
+              right away
+            </li>
+            <li>
+              <i class="icon-check-circle-o"></i> Scale up your expertise and
+              resource availability
+            </li>
+            <li>
+              <i class="icon-check-circle-o"></i> Minimise support costs
+            </li>
+            <li>
+              <i class="icon-check-circle-o"></i> Reduce training required
+            </li>
+          </ul>
+          <div class="line"></div>
+          <p><strong>ITSM efficiency</strong></p>
+        </div>
+        <a href="https://info.ktsl.com/book-a-demo-ktsl" class="button button--white benefits-section__button">Arrange
+          a consultation</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footer">
+        <div class="footer__logo">
+          <img src="assets/images/Footer-Logo.png" alt="KTSL logo" />
+        </div>
+        <div class="footer__address">
+          <address>
+            KTSL Limited<br />
+            Unit 23<br />
+            Leafield Industrial Estate<br />
+            Wiltshire<br />
+            SN13 9RS<br />
+          </address>
+        </div>
+        <div class="footer__nav">
+          <ul>
+            <li><a href="https://www.ktsl.com/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="tel:08450348000">t: 0845 034 8000</a></li>
+          </ul>
         </div>
       </div>
-    </section>
-    <footer>
-      <div class="container">
-        <div class="footer">
-          <div class="footer__logo">
-            <img src="assets/images/Footer-Logo.png" alt="KTSL logo" />
-          </div>
-          <div class="footer__address">
-            <address>
-              KTSL Limited<br />
-              Unit 23<br />
-              Leafield Industrial Estate<br />
-              Wiltshire<br />
-              SN13 9RS<br />
-            </address>
-          </div>
-          <div class="footer__nav">
-            <ul>
-              <li><a href="https://www.ktsl.com/privacy-policy/">Privacy Policy</a></li>
-              <a href="tel:08450348000">t: 0845 034 8000</a>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script src="assets/javascript/ar.js" async defer></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5115463.js"></script>
-    <!-- End of HubSpot Embed Code -->
-    <script>
-        AOS.init();
-    </script>
-  </body>
+    </div>
+  </footer>
+  <script src="assets/javascript/ar.js" async defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5115463.js"></script>
+  <!-- End of HubSpot Embed Code -->
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>
