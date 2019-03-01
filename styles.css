@@ -1124,6 +1124,31 @@ nav .wrapper {
     font-size: 14px;
   }
 }
+/* BSC In Action *************************************
+************************************************** */
+
+.in-action {
+  background-color: #f23d29;
+  color: white;
+}
+.in-action__container{
+  display: flex;
+  justify-content: center;
+  height:400px;
+}
+.in-action__list {
+  width: 39.75%;
+  align-self: center;
+}
+.in-action__line {
+  width: 0.25%;
+  background-color: white;
+}
+.in-action__slide {
+  width: 60%;
+  align-self: center;
+}
+
 /* BENEFITS *****************************************
 ************************************************** */
 .benefits-section {
