@@ -57,7 +57,7 @@
     <div class="container">
       <div class="hero">
         <div class="hero__image-containter">
-            <img src="assets/images/BSC-Banner.png" alt="Augmented reality header image" />
+            <img src="assets/images/BSC-Banner-rs.png" alt="Augmented reality header image" />
         </div>
         <div class="hero__text-container">
           <div class="ie-padding">
@@ -131,7 +131,7 @@
               <a class="slider-right animated pulse fast" onclick="plusDivs(1, 0)">&#8594;</a>
             </div>
           </div>
-          <img src="assets/images/Laptop-Demo.png" alt="Augmented reality laptop demo" />
+          <img src="assets/images/ipad-gallery-BSC-landing-page.png" alt="Augmented reality laptop demo" />
         </div>
       </div>
     </div>
@@ -143,8 +143,8 @@
     <div class="in-action__container">
     <div class="in-action__list">
       <ul>
-        <li>01. User books appointment</li>
-        <li>02. User visits BSC</li>
+        <li onclick="BSC1()">01. User books appointment</li>
+        <li onclick="BSC2()">02. User visits BSC</li>
         <li>03. Targeted messages delivered</li>
         <li>04. IT database updated</li>
         <li>05. Engineer briefed</li>
@@ -152,12 +152,19 @@
       </ul>
     </div>
     <div class="in-action__line"></div>
+    <div id="BSC1" class="in-action__image BSC-in-action">
+     <img src="/assets/images/image1.png" alt="">
+    </div>
+    <div id="BSC2" class="in-action__image hide-slideshow BSC-in-action">
+      <img src="/assets/images/image1.png" alt="">
+     </div>
     <div class="in-action__slide">
       <div>
-        <div>
-          <h2>The KTSL BSC in action</h2>
-          <p>02. User visits BSC</p>
-          <p>KTSL AR makes booking simple – users choose a time, confirmed by SMS  and email</p>
+        <div id="BSC1-text">
+          <h2>The KTSL BSC<br> in action</h2>
+          <p class="in-action__slide--text">02. User visits BSC</p>
+          <p class="in-action__slide--paragraph"></pclass>KTSL AR makes booking simple – users choose a time, confirmed by SMS  and email</p>
+          <a href="https://info.ktsl.com/book-a-demo-ktsl" class="button button--white">Find out more</a>
         </div>
       </div>
     </div>
@@ -277,6 +284,25 @@ function showDivs(n, no) {
   }
   x[slideIndex[no] - 1].style.display = "block";
 }
+
+function allHidden() {
+  var divs = document.querySelectorAll(".BSC-in-action");
+  for (var i = 0; i < divs.length; i++) {
+    divs[i].classList.add("hide-slideshow");
+    divs[i].classList.remove("show-slideshow");
+  }
+}
+
+function BSC1() {
+  allHidden();
+  document.getElementById("BSC1").classList.toggle("show-slideshow");
+}
+
+function BSC2() {
+  allHidden();
+  document.getElementById("BSC2").classList.toggle("show-slideshow");
+}
+
 </script>
 </body>
 

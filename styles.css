@@ -1017,6 +1017,57 @@ nav .wrapper {
     padding: 0px 25%;
   }
 }
+
+
+/* BSC In Action *************************************
+************************************************** */
+
+.in-action {
+  background-color: #f23d29;
+  color: white;
+}
+.in-action__container{
+  display: flex;
+  justify-content: center;
+  height:500px;
+}
+.in-action__list {
+  width: 15.75%;
+  align-self: center;
+  flex-grow: 1;
+}
+.in-action__image {
+  width: 15%;
+  border-bottom: 2.5px solid white;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.in-action__line {
+  width: 3px;
+  background-color: white;
+}
+.in-action__slide {
+  width: 40%;
+  padding-left: 5%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.in-action__slide--text {
+  font-size: 26px;
+}
+.in-action__slide--paragraph {
+  margin-bottom: 60px;
+}
+.BSC-in-action{
+
+}
+
+
+
 /* APP *****************************************
 ************************************************** */
 .action-section {
@@ -1088,6 +1139,12 @@ nav .wrapper {
 .show-slideshow {
   display: block;
   margin: auto 0;
+  width: 15%;
+  border-bottom: 2.5px solid white;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
 }
 /* * This class will hide all the body by default * */
 #accordion .acc-body {
@@ -1123,30 +1180,6 @@ nav .wrapper {
   .acc-body {
     font-size: 14px;
   }
-}
-/* BSC In Action *************************************
-************************************************** */
-
-.in-action {
-  background-color: #f23d29;
-  color: white;
-}
-.in-action__container{
-  display: flex;
-  justify-content: center;
-  height:400px;
-}
-.in-action__list {
-  width: 39.75%;
-  align-self: center;
-}
-.in-action__line {
-  width: 0.25%;
-  background-color: white;
-}
-.in-action__slide {
-  width: 60%;
-  align-self: center;
 }
 
 /* BENEFITS *****************************************
