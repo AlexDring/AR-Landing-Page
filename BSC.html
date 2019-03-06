@@ -143,8 +143,8 @@
     <div class="in-action__container">
     <div class="in-action__list">
       <ul>
-        <li onclick="BSC1()">01. User books appointment</li>
-        <li onclick="BSC2()">02. User visits BSC</li>
+        <li onclick="filter(0,1,0)">01. User books appointment</li>
+        <li onclick="filter(1,0,0)">02. User visits BSC</li>
         <li>03. Targeted messages delivered</li>
         <li>04. IT database updated</li>
         <li>05. Engineer briefed</li>
@@ -152,18 +152,28 @@
       </ul>
     </div>
     <div class="in-action__line"></div>
-    <div id="BSC1" class="in-action__image BSC-in-action">
-     <img src="/assets/images/image1.png" alt="">
+    <div class="bsc-image__container">
+      <div id="BSC1" class="in-action__image BSC-in-action it">
+        <img class="bsc-arrow" src="/assets/images/in-action-arrow.png" alt="">
+      <img src="/assets/images/BSC-Image-1.png" alt="">
+      </div>
+      <div id="BSC2" class="in-action__image BSC-in-action design" style="display:none;">
+        <img src="/assets/images/BSC-Image-2.png" alt="">
+      </div>
     </div>
-    <div id="BSC2" class="in-action__image hide-slideshow BSC-in-action">
-      <img src="/assets/images/image1.png" alt="">
-     </div>
     <div class="in-action__slide">
       <div>
         <div id="BSC1-text">
           <h2>The KTSL BSC<br> in action</h2>
+          <div class="it">
           <p class="in-action__slide--text">02. User visits BSC</p>
-          <p class="in-action__slide--paragraph"></pclass>KTSL AR makes booking simple – users choose a time, confirmed by SMS  and email</p>
+          <p class="in-action__slide--paragraph">KTSL AR makes booking simple – users choose a time, confirmed by SMS  and email</p>
+          </div>
+          <div class="design" style="display:none;">
+            <p class="in-action__slide--text">03. Targeted messages delivered</p>
+            <p class="in-action__slide--paragraph">With the user identified, personalised messaging can be provided from the IT team
+              </p>
+            </div>
           <a href="https://info.ktsl.com/book-a-demo-ktsl" class="button button--white">Find out more</a>
         </div>
       </div>
@@ -285,22 +295,22 @@ function showDivs(n, no) {
   x[slideIndex[no] - 1].style.display = "block";
 }
 
-function allHidden() {
-  var divs = document.querySelectorAll(".BSC-in-action");
-  for (var i = 0; i < divs.length; i++) {
-    divs[i].classList.add("hide-slideshow");
-    divs[i].classList.remove("show-slideshow");
+
+
+/******************/
+
+
+function filter(designDisp, itDisp, otherDisp) {
+  setDisplay("design", designDisp);
+  setDisplay("it", itDisp);
+  setDisplay("other", otherDisp);
+}
+
+function setDisplay(className, displayValue) {
+  var items = document.getElementsByClassName(className);
+  for (var i=0; i < items.length; i++) {
+    items[i].style.display = (displayValue? "block" : "none");
   }
-}
-
-function BSC1() {
-  allHidden();
-  document.getElementById("BSC1").classList.toggle("show-slideshow");
-}
-
-function BSC2() {
-  allHidden();
-  document.getElementById("BSC2").classList.toggle("show-slideshow");
 }
 
 </script>

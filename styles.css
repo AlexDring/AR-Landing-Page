@@ -1032,24 +1032,27 @@ nav .wrapper {
   height:500px;
 }
 .in-action__list {
-  width: 15.75%;
+  min-width: 25%;
   align-self: center;
   flex-grow: 1;
 }
 .in-action__image {
-  width: 15%;
-  border-bottom: 2.5px solid white;
-  align-self: center;
+  min-width: 100%;
+}
+.bsc-image__container {
+  min-width: 25%;
   display: flex;
   justify-content: center;
   flex-grow: 1;
+  align-self: center;
+  border-bottom: 2.5px solid white;
 }
 .in-action__line {
   width: 3px;
   background-color: white;
 }
 .in-action__slide {
-  width: 40%;
+  min-width: 40%;
   padding-left: 5%;
   align-self: center;
   display: flex;
@@ -1062,11 +1065,14 @@ nav .wrapper {
 .in-action__slide--paragraph {
   margin-bottom: 60px;
 }
-.BSC-in-action{
+.BSC-in-action{}
+.it {}
+.design {}
+.other {}
 
+.bsc-arrow {
+  margin: -28px -21px;
 }
-
-
 
 /* APP *****************************************
 ************************************************** */
