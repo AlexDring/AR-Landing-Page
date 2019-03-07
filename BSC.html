@@ -137,50 +137,68 @@
     </div>
   </section>
 
-
-<section class="in-action">
-  <div class="container">
-    <div class="in-action__container">
-    <div class="in-action__list">
-      <ul>
-        <li onclick="filter(0,1,0)">01. User books appointment</li>
-        <li onclick="filter(1,0,0)">02. User visits BSC</li>
-        <li>03. Targeted messages delivered</li>
-        <li>04. IT database updated</li>
-        <li>05. Engineer briefed</li>
-        <li>06. Progress tracked</li>
-      </ul>
-    </div>
-    <div class="in-action__line"></div>
-    <div class="bsc-image__container">
-      <div id="BSC1" class="in-action__image BSC-in-action it">
-        <img class="bsc-arrow" src="/assets/images/in-action-arrow.png" alt="">
-      <img src="/assets/images/BSC-Image-1.png" alt="">
-      </div>
-      <div id="BSC2" class="in-action__image BSC-in-action design" style="display:none;">
-        <img src="/assets/images/BSC-Image-2.png" alt="">
-      </div>
-    </div>
-    <div class="in-action__slide">
-      <div>
-        <div id="BSC1-text">
-          <h2>The KTSL BSC<br> in action</h2>
-          <div class="it">
-          <p class="in-action__slide--text">02. User visits BSC</p>
-          <p class="in-action__slide--paragraph">KTSL AR makes booking simple – users choose a time, confirmed by SMS  and email</p>
-          </div>
-          <div class="design" style="display:none;">
-            <p class="in-action__slide--text">03. Targeted messages delivered</p>
-            <p class="in-action__slide--paragraph">With the user identified, personalised messaging can be provided from the IT team
-              </p>
+  <section class="in-action">
+    <div class="container">
+        <div class="in-action__container">
+            <div class="in-action__list">
+              <a class="prev" onclick="plusSlides(-1)">↑</a>
+              <ul class="inaction__li">
+                <li onclick="currentSlide(1)"><span class="dot"></span> 01. User books appointment</li>
+                <li onclick="currentSlide(2)"><span class="dot"></span> 02. User visits BSC</li>
+                <li onclick="currentSlide(3)"><span class="dot"></span> 03. Targeted messages delivered</li>
+                <li onclick="currentSlide(4)"><span class="dot"></span> 04. IT database updated</li>
+                <li onclick="currentSlide(5)"><span class="dot"></span> 05. Engineer briefed</li>
+                <li onclick="currentSlide(6)"><span class="dot"></span> 06. Progress tracked</li>
+              </ul>
+              <a class="next" onclick="plusSlides(1)">↓</a>
             </div>
-          <a href="https://info.ktsl.com/book-a-demo-ktsl" class="button button--white">Find out more</a>
+            <div class="in-action__line"></div>
+            <div class="mySlides2">
+                <div class="bsc-image__container">
+                 <img src="/assets/images/BSC-Image-1.png">
+                 <img class="bsc-arrow" src="/assets/images/in-action-arrow.png" alt="">
+                 <div class="bsc-circle"></div>
+                </div>
+                <div class="bsc-image__text">
+                    <h2>The KTSL BSC<br> in action</h2>
+                    <p class="in-action__slide--text">01. User visits BSC</p>
+                    <p class="in-action__slide--paragraph">KTSL AR makes booking simple – users choose a time, confirmed by SMS  and email</p>
+                    <a href="https://info.ktsl.com/book-a-demo-ktsl" class="button button--white">Find out more</a>
+                  </div>
+              </div>
+              
+              <div class="mySlides2">
+                <div class="bsc-image__container">
+                  <img class="fade" src="/assets/images/BSC-Image-2.png">
+                  <img class="bsc-arrow" src="/assets/images/in-action-arrow.png" alt="">
+                  <div class="bsc-circle"></div>
+                </div>
+                <div class="bsc-image__text">
+                  <h2>The KTSL BSC<br> in action</h2>
+                  <p class="in-action__slide--text fade">02. Targeted messages delivered</p>
+                  <p class="in-action__slide--paragraph fade">With the user identified, personalised messaging can be provided from the IT team</p>
+                  <a href="https://info.ktsl.com/book-a-demo-ktsl" class="button button--white">Find out more</a>
+                </div>
+              </div>
+              
+              <div class="mySlides2">
+                <div class="bsc-image__container">
+                  <img src="/assets/images/BSC-Image-3.png">
+                  <img class="bsc-arrow" src="/assets/images/in-action-arrow.png" alt="">
+                  <div class="bsc-circle"></div>
+                </div>
+                <div class="bsc-image__text">
+                  <h2>The KTSL BSC<br> in action</h2>
+                  <p class="in-action__slide--text">03. Targeted messages delivered</p>
+                  <p class="in-action__slide--paragraph">With the user identified, personalised messaging can be provided from the IT team</p>
+                  <a href="https://info.ktsl.com/book-a-demo-ktsl" class="button button--white">Find out more</a>
+                </div>
+              </div>
         </div>
-      </div>
+      
+
     </div>
-  </div>
-  </div>
-</section>
+  </section>
 
   <section class="section benefits-section">
     <div class="container">
@@ -265,16 +283,44 @@
   <script>
     AOS.init();
   </script>
+  <!-- <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "flex";
+      dots[slideIndex-1].className += " active";
+    } 
+    </script> -->
+
   <script>
   // Slideshows
 
-var slideIndex = [1, 1, 1, 1, 1];
-var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5"];
+var slideIndex = [1, 1];
+var slideId = ["mySlides1", "mySlides2"];
 showDivs(1, 0);
 showDivs(1, 1);
-showDivs(1, 2);
-showDivs(2, 3);
-showDivs(3, 4);
 
 function plusDivs(n, no) {
   showDivs((slideIndex[no] += n), no);
@@ -292,25 +338,7 @@ function showDivs(n, no) {
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndex[no] - 1].style.display = "block";
-}
-
-
-
-/******************/
-
-
-function filter(designDisp, itDisp, otherDisp) {
-  setDisplay("design", designDisp);
-  setDisplay("it", itDisp);
-  setDisplay("other", otherDisp);
-}
-
-function setDisplay(className, displayValue) {
-  var items = document.getElementsByClassName(className);
-  for (var i=0; i < items.length; i++) {
-    items[i].style.display = (displayValue? "block" : "none");
-  }
+  x[slideIndex[no] - 1].style.display = "flex";
 }
 
 </script>

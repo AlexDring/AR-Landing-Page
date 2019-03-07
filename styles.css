@@ -436,7 +436,7 @@ body {
 }
 
 p {
-  line-height: 130%;
+  line-height: 1.3;
 }
 
 a {
@@ -1029,10 +1029,10 @@ nav .wrapper {
 .in-action__container{
   display: flex;
   justify-content: center;
-  height:500px;
+  height:550px;
 }
 .in-action__list {
-  min-width: 25%;
+  min-width: 300px;
   align-self: center;
   flex-grow: 1;
 }
@@ -1040,16 +1040,22 @@ nav .wrapper {
   min-width: 100%;
 }
 .bsc-image__container {
-  min-width: 25%;
+  min-width: 300px;
   display: flex;
   justify-content: center;
   flex-grow: 1;
   align-self: center;
   border-bottom: 2.5px solid white;
+  position: relative;
+}
+.bsc-image__text{
+  align-self: center;
+  padding-left: 50px;
 }
 .in-action__line {
   width: 3px;
   background-color: white;
+  box-shadow: 6px 0px 14px 0px black;
 }
 .in-action__slide {
   min-width: 40%;
@@ -1063,16 +1069,69 @@ nav .wrapper {
   font-size: 26px;
 }
 .in-action__slide--paragraph {
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
-.BSC-in-action{}
-.it {}
-.design {}
-.other {}
-
 .bsc-arrow {
-  margin: -28px -21px;
+  position: absolute;
+  bottom: -25px;
+  left: -22px;
 }
+.bsc-circle{
+  position: absolute;
+  bottom: -11px;
+  right: -18px;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.inaction__li li {
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  font-size: 35px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+  background-color:white;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 
 /* APP *****************************************
 ************************************************** */
